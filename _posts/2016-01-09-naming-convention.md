@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: coding-standarts
-title: İsimlendirme Kuralları
+title: İsimlendirme Kuralları(Naming Convention)
 excerpt: "Programlamada isimlendirme kuralları"
 tags: [naming, standarts, programming, coding]
 comments: true
@@ -68,4 +68,13 @@ Java dilinde isimlendirmeler için bazı standartlar oluşturulmuştur.
 * Sabitler: Sabitlet için **screaming snake case** kullanılır.                                                            
 `Örnek:` HELLO_WORLD 
 
+##Değişken İsimlendirmede Dikkat Edilmesi Gerekenler
 
+* Değişkenler kullanılan dilin syntaxında var olan kelimeleri alamazlar.
+`Örnek:` int = 2;
+
+* Değişkenler sayı ile başlayamaz.
+`Örnek:` 5index = 9;
+
+* Değişkenler boşluk veya özel karakter içeremez.
+`Örnek:` index?number = 6;
