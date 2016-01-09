@@ -70,11 +70,11 @@ Java dilinde isimlendirmeler için bazı standartlar oluşturulmuştur.
 
 ##Değişken İsimlendirmede Dikkat Edilmesi Gerekenler
 
-* Değişkenler kullanılan dilin syntaxında var olan kelimeleri alamazlar.
+* Değişkenler kullanılan dilin syntaxında var olan kelimeleri alamazlar.                                                  
 `Örnek:` int = 2;
 
-* Değişkenler sayı ile başlayamaz.
+* Değişkenler sayı ile başlayamaz.                                                                                        
 `Örnek:` 5index = 9;
 
-* Değişkenler boşluk veya özel karakter içeremez.
+* Değişkenler boşluk veya özel karakter içeremez.                                                                         
 `Örnek:` index?number = 6;
