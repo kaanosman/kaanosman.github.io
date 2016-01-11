@@ -1,5 +1,5 @@
 ---
 layout: home
-excerpt: "A minimal Jekyll theme for your blog by designer Michael Rose."
-tags: [Jekyll, theme, responsive, blog, template]
+excerpt: "Kaan Osman Arslan ~ Bilgisayar Mühendisi"
+tags: [kaanosman, blog, software, engineer, jekyll]
 ---
