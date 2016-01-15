@@ -6,13 +6,13 @@
 <head>
 <meta charset="utf-8">
 <title>Kaan Osman Arslan</title>
-<meta name="description" content="Kaan Osman Arslan ~ Bilgisayar Mühendisi">
-<meta name="keywords" content="kaanosman, blog, software, engineer, jekyll">
+<meta name="description" content="A minimal Jekyll theme for your blog by designer Michael Rose.">
+<meta name="keywords" content="Jekyll, theme, responsive, blog, template">
 
 
 <!-- Twitter Cards -->
 <meta name="twitter:title" content="Kaan Osman Arslan">
-<meta name="twitter:description" content="Kaan Osman Arslan ~ Bilgisayar Mühendisi">
+<meta name="twitter:description" content="A minimal Jekyll theme for your blog by designer Michael Rose.">
 <meta name="twitter:site" content="@kaanosmanarslan">
 <meta name="twitter:creator" content="@kaanosmanarslan">
 
@@ -23,7 +23,7 @@
 <meta property="og:locale" content="tr-TR">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kaan Osman Arslan">
-<meta property="og:description" content="Kaan Osman Arslan ~ Bilgisayar Mühendisi">
+<meta property="og:description" content="A minimal Jekyll theme for your blog by designer Michael Rose.">
 <meta property="og:url" content="http://kaanosman.github.io/">
 <meta property="og:site_name" content="Kaan Osman Arslan">
 
@@ -139,15 +139,8 @@
     
     <article>
       
-        <h2><a href="http://kaanosman.github.io/coding-standarts/naming-convention/" title="İsimlendirme Kuralları(Naming Convention)">İsimlendirme Kuralları(Naming Convention)</a></h2>
+        <h2><a href="http://kaanosman.github.io/coding-standarts/naming-convention/" title="İsimlendirme Kuralları">İsimlendirme Kuralları</a></h2>
         <p>Programlamada isimlendirme kuralları</p>
-      
-    </article>
-    
-    <article>
-      
-        <h2><a href="http://kaanosman.github.io/coding-standarts/indent-style/" title="Girintileme Stilleri(Indent Styles)">Girintileme Stilleri(Indent Styles)</a></h2>
-        <p>Girintileme Stilleri</p>
       
     </article>
     
@@ -166,22 +159,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="http://kaanosman.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="http://kaanosman.github.io/assets/js/scripts.min.js"></script>
-
-<!-- Asynchronous Google Analytics snippet -->
-<script>
-  var _gaq = _gaq || [];
-  var pluginUrl =
- '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-  _gaq.push(['_setAccount', 'UA-72219425-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 
 
 

@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Kaan Osman Arslan</title>
-<meta name="description" content="Kaan Osman Arslan ~ Bilgisayar Mühendisi">
-<meta name="keywords" content="kaanosman, blog, software, engineer, jekyll">
+<title>Ruby Kurulumu &#8211; Kaan Osman Arslan</title>
+<meta name="description" content="Ubunyu'ya ruby version 2.0.0> kurulması">
+<meta name="keywords" content="ruby, install, source">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Kaan Osman Arslan">
-<meta name="twitter:description" content="Kaan Osman Arslan ~ Bilgisayar Mühendisi">
+<meta name="twitter:title" content="Ruby Kurulumu">
+<meta name="twitter:description" content="Ubunyu'ya ruby version 2.0.0> kurulması">
 <meta name="twitter:site" content="@kaanosmanarslan">
 <meta name="twitter:creator" content="@kaanosmanarslan">
 
@@ -22,9 +22,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="tr-TR">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kaan Osman Arslan">
-<meta property="og:description" content="Kaan Osman Arslan ~ Bilgisayar Mühendisi">
-<meta property="og:url" content="http://kaanosman.github.io/">
+<meta property="og:title" content="Ruby Kurulumu">
+<meta property="og:description" content="Ubunyu'ya ruby version 2.0.0> kurulması">
+<meta property="og:url" content="http://kaanosman.github.io/ruby/install-ruby/">
 <meta property="og:site_name" content="Kaan Osman Arslan">
 
 <meta property="og:image" content="http://kaanosman.github.io/images/default-thumb.png">
@@ -34,7 +34,7 @@
 
 
 
-<link rel="canonical" href="http://kaanosman.github.io/">
+<link rel="canonical" href="http://kaanosman.github.io/ruby/install-ruby/">
 <link href="http://kaanosman.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Kaan Osman Arslan Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -74,7 +74,7 @@
 
 </head>
 
-<body class="home">
+<body class="post">
 
 <!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
 
@@ -134,31 +134,31 @@
 </div>
 
   </div>
-  <div id="index">
-    <h3><a href="http://kaanosman.github.io/posts/">Son Yazılarım</a></h3>
-    
-    <article>
+  <article class="post">
+    <div class="headline-wrap">
       
-        <h2><a href="http://kaanosman.github.io/coding-standarts/naming-convention/" title="İsimlendirme Kuralları(Naming Convention)">İsimlendirme Kuralları(Naming Convention)</a></h2>
-        <p>Programlamada isimlendirme kuralları</p>
+        <h1><a href="http://kaanosman.github.io/ruby/install-ruby/" rel="bookmark" title="Ruby Kurulumu">Ruby Kurulumu</a></h1>
       
-    </article>
-    
-    <article>
-      
-        <h2><a href="http://kaanosman.github.io/coding-standarts/indent-style/" title="Girintileme Stilleri(Indent Styles)">Girintileme Stilleri(Indent Styles)</a></h2>
-        <p>Girintileme Stilleri</p>
-      
-    </article>
-    
-  </div><!-- /#index -->
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>Rubynin şu an en son kararlı sürümü 2.2.4 olmasına rağmen ubuntu depolarında 1.9.3 sürümü bulunuyor. <code>sudo apt-get install ruby-full</code> diye kurduğumuzda da 1.9.3 sürümü kuruluyor. Jekyll 3 gibi ruby 2.0.0 ve üstü ruby sürümü gerektiren bir uygulamayla uğraşıyorsanız hata almamanız için istenen ruby sürümünü kurmanız gerekir.Bunun için ilk önce <a href="https://www.ruby-lang.org/tr/downloads/">link</a> adresinden rubynin kaynak dosyasını indirmeniz gerekir.</p>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <p class="byline"><strong>Ruby Kurulumu</strong> was published on <time datetime="2015-12-20T00:00:00+02:00">December 20, 2015</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  
+  </article>
 </div><!-- /#main -->
 
 <div class="footer-wrap">
+  
   <footer>
     
 
-<span>&copy; 2016 Kaan Osman Arslan. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+<span>&copy; 2015 Kaan Osman Arslan. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
 
   </footer>
 </div><!-- /.footer-wrap -->
@@ -167,21 +167,8 @@
 <script>window.jQuery || document.write('<script src="http://kaanosman.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="http://kaanosman.github.io/assets/js/scripts.min.js"></script>
 
-<!-- Asynchronous Google Analytics snippet -->
-<script>
-  var _gaq = _gaq || [];
-  var pluginUrl =
- '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-  _gaq.push(['_setAccount', 'UA-72219425-1']);
-  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+  
 
 
 
