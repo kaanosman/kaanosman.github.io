@@ -18,11 +18,11 @@ tuşuna basarak bu kipe geçiş yapabiliriz.
 
 * Görünüm Kipi : Eğer terminalin en altında VISUAL yazıyorsa bu kipte olduğumuzu anlarız. Sadece dosyayı görüntüleme içindir değişiklik yapılamaz. **v** tuşuna basılarak bu kipe geçilir.
 
-## Ubuntuda Vim Kurulumu
+##Ubuntuda Vim Kurulumu
 
 **sudo apt-get install vim** komutunu yazdıktan sonra sudo parolanızı girin.
 
-## Ayarlamalar
+##Ayarlamalar
 
 Vim editörünü bazı ayarlamalar yaparak çok daha kullanışlı hale getirebilirsiniz. Vim ayarlamalarını yapmak için .vimrc dosyasını kullanmalısınız. Bu dosyanın bilgisayarınızda nerede olduğunu bulmak için vim editörünü açıp esc tuşuna basarak komut kipine geçin ve **:version** yazın. Ekrana gelen çıktıda .vimrc dosyasının nerede bulunduğunu görebilirsiniz. Büyük ihtimalle **$Home/.vimrc** dizininde bulunur ama kontrol etmekte fayda var. Vim yönetici kipindeyken **:e $Home/.vimrc** komutuyla vimrc dosyasını açın. Ayarlar için aşağıdaki linkten yararlanabilirsiniz.
 
@@ -39,7 +39,7 @@ Ayarların bazılarını aşağıda açıklayalım.
 * set tabstop=8 => tab uzunluğunu 8 karakter yapar.
 * set autoindent => girintileme özelliğini aktifleştirir.
 
-## Kullanım
+##Kullanım
 
 Vim editöründe bir dosya açmak için terminali açın ve **vim dosya_adı.uzantısı** şeklinde dosyanın adını ve uzantısını belirtin. Vim uzantıya göre renklendirme yapacaktır. Daha sonra insert moduna geçip kodunuzu yazabilirsiniz.
 
