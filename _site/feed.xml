@@ -4,13 +4,86 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://kaanosman.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://kaanosman.github.io" />
-<updated>2016-01-15T22:32:29+02:00</updated>
+<updated>2016-02-21T23:55:40+02:00</updated>
 <id>http://kaanosman.github.io/</id>
 <author>
   <name>Kaan Osman Arslan</name>
   <uri>http://kaanosman.github.io/</uri>
   <email>kaanosmanarslan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Vim Kurulumu ve Kullanımı]]></title>
+  <link rel="alternate" type="text/html" href="http://kaanosman.github.io/programs/install-vim/" />
+  <id>http://kaanosman.github.io/programs/install-vim</id>
+  <published>2016-02-21T00:00:00+02:00</published>
+  <updated>2016-02-21T00:00:00+02:00</updated>
+  <author>
+    <name>Kaan Osman Arslan</name>
+    <uri>http://kaanosman.github.io</uri>
+    <email>kaanosmanarslan@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Vim vi metin düzenleyici temel alınarak yazılmış açık kaynaklı bir yazılımdır. Özellikle linuxda komut satırından çalışmayı sevenler için kullanışlı bir metin editörüdür. Başlangıçda öğrenmesi biraz zor olsa da öğrendikten sonra alışkanlık haline gelir. Eklenti sayısının çok olması ve çok çeşitli ayarlamalar yaparak kişiselleştirebilmeye imkan tanıması güzel özelliklerindendir.&lt;/p&gt;
+
+&lt;p&gt;Vimde değişik kipler vardır. Bunlar komut kipi, yazma kipi ve görünüm kipleridir.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Komut Kipi : Dosya ilk açıldığında bu kiptedir. Eğer en altta dosya ismi gözüküyorsa bu kipte olduğumuzu anlarız. Başka bir kipteyken &lt;strong&gt;esc&lt;/strong&gt;
+tuşuna basarak bu kipe geçiş yapabiliriz.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Yazma Kipi : Klavyedeki &lt;strong&gt;i(insert)&lt;/strong&gt; tuşuna basarak bu kipe geçiş yapabiliriz. En altta INSERT yazıyorsa bu kipte olduğumuzu anlarız. Bu kipteyken dosyaya yazma işlemini yapabiliriz.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Görünüm Kipi : Eğer terminalin en altında VISUAL yazıyorsa bu kipte olduğumuzu anlarız. Sadece dosyayı görüntüleme içindir değişiklik yapılamaz. &lt;strong&gt;v&lt;/strong&gt; tuşuna basılarak bu kipe geçilir.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ubuntuda-vim-kurulumu&quot;&gt;Ubuntuda Vim Kurulumu&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;sudo apt-get install vim&lt;/strong&gt; komutunu yazdıktan sonra sudo parolanızı girin.&lt;/p&gt;
+
+&lt;h2 id=&quot;ayarlamalar&quot;&gt;Ayarlamalar&lt;/h2&gt;
+
+&lt;p&gt;Vim editörünü bazı ayarlamalar yaparak çok daha kullanışlı hale getirebilirsiniz. Vim ayarlamalarını yapmak için .vimrc dosyasını kullanmalısınız. Bu dosyanın bilgisayarınızda nerede olduğunu bulmak için vim editörünü açıp esc tuşuna basarak komut kipine geçin ve &lt;strong&gt;:version&lt;/strong&gt; yazın. Ekrana gelen çıktıda .vimrc dosyasının nerede bulunduğunu görebilirsiniz. Büyük ihtimalle &lt;strong&gt;$Home/.vimrc&lt;/strong&gt; dizininde bulunur ama kontrol etmekte fayda var. Vim yönetici kipindeyken &lt;strong&gt;:e $Home/.vimrc&lt;/strong&gt; komutuyla vimrc dosyasını açın. Ayarlar için aşağıdaki linkten yararlanabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://vimconfig.com/&quot;&gt;vimrc ayarları&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ayarların bazılarını aşağıda açıklayalım.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;set number =&amp;gt; satır numaralarının gözükmesini sağlar.&lt;/li&gt;
+  &lt;li&gt;syntax on =&amp;gt; dosya uzantısına göre renklendirme yapar.&lt;/li&gt;
+  &lt;li&gt;set is =&amp;gt; aranılacak kelime yazılırken bulmaya başlar.&lt;/li&gt;
+  &lt;li&gt;set ic =&amp;gt; büyük-küçük harf ayrımı yapmadan arar.&lt;/li&gt;
+  &lt;li&gt;set hls =&amp;gt; sayfada arama yapılan kelimeleri beirginleştirir.&lt;/li&gt;
+  &lt;li&gt;set encoding=utf-8 =&amp;gt; dosyanın otomatik utf8 formatında olmasını sağlar.&lt;/li&gt;
+  &lt;li&gt;set tabstop=8 =&amp;gt; tab uzunluğunu 8 karakter yapar.&lt;/li&gt;
+  &lt;li&gt;set autoindent =&amp;gt; girintileme özelliğini aktifleştirir.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;kullanm&quot;&gt;Kullanım&lt;/h2&gt;
+
+&lt;p&gt;Vim editöründe bir dosya açmak için terminali açın ve &lt;strong&gt;vim dosya_adı.uzantısı&lt;/strong&gt; şeklinde dosyanın adını ve uzantısını belirtin. Vim uzantıya göre renklendirme yapacaktır. Daha sonra insert moduna geçip kodunuzu yazabilirsiniz.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dosyayı kaydetmeden çıkmak için &lt;strong&gt;:q&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Dosyayı kaydet ve çık için &lt;strong&gt;:wq&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Dosyayı kaydet ama çıkma &lt;strong&gt;:w&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;İki yatay dosya açmak için &lt;strong&gt;vim -o dosya1.uzantı dosya2.uzantı&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;İki dikey dosya açmak için &lt;strong&gt;vim -O dosya1.uzantı dosya2.uzantı&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;İki dosya arası geçiş yapmak için &lt;strong&gt;ctrl+w&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;komutları kullanılır.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://kaanosman.github.io/programs/install-vim/&quot;&gt;Vim Kurulumu ve Kullanımı&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanosman.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on February 21, 2016.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
