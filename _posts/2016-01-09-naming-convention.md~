@@ -8,13 +8,13 @@ comments: true
 --- 
 İsimlendirme kuralları hem bireysel hem de bir ekiple yazılım geliştirenler için küçük gibi görünen ama önemli bir konudur. Bunun için belirli isimlendirme kuralları oluşturulmuştur. Namespaceler, classlar, metodlar, değişkenler ve sabitler için yazılan programlama dilinin ismilendirme kurallarını uygulamak ve mantıklı isimler vermek yazılımcılara kolaylık sağlar. Yazılım geliştirdiğimiz dilin isimlendirme kurallarını öğrenip uygulamak önemli bir detaydır. Şimdi bu kuralların neler olduğuna ve bazı dillerde nasıl uygulandığına örneklerle bakalım.
 
-### Camel Case(CamelCase)
+###Camel Case(CamelCase)
 
 Camel case çok kullanılan isimlendirme kurallarından biridir. Kelimeler bitişik ve ilk harfleri büyük yazılır. İlk kelimenin ilk harfinin küçük yazıldığı olabilir.
 
 `Örnek:` HelloWorld
 
-### Snake Case(Snake_Case)
+###Snake Case(Snake_Case)
 
 **Upper snake case** ve **lower snake case** olarak ikiye ayırabiliriz. Kelimeler alttire ile birbirine bağlanır.
 
@@ -22,7 +22,7 @@ Camel case çok kullanılan isimlendirme kurallarından biridir. Kelimeler biti�
 
 `Lower snake case örnek:` hello_world
 
-### Screaming snake case(SCREAMİNG_SNAKE_CASE)
+###Screaming snake case(SCREAMİNG_SNAKE_CASE)
 
 Bütün harfleri büyük yazılır. Genellikle sabit isimlendirmede kullanılır.
 
@@ -30,7 +30,7 @@ Bütün harfleri büyük yazılır. Genellikle sabit isimlendirmede kullanılır
 
 Şimdi de bazı diller için bu kuralları örneklerle açıklayalım.
 
-## Java İçin İsimlendirme Kuralları
+##Java İçin İsimlendirme Kuralları
 
 Java dilinde isimlendirmeler için bazı standartlar oluşturulmuştur.
 
@@ -57,7 +57,7 @@ Java dilinde isimlendirmeler için bazı standartlar oluşturulmuştur.
 * Sabitler: Sabitlet için **screaming snake case** kullanılır.                                                            
 `Örnek:` HELLO_WORLD
 
-## Php İçin İsimlendirme Kuralları
+##Php İçin İsimlendirme Kuralları
 
 * Sınıflar ve Paketler: Classlar için **upper camel case** kullanılır.                                                    
 `Örnek:` HelloWorld
@@ -68,7 +68,7 @@ Java dilinde isimlendirmeler için bazı standartlar oluşturulmuştur.
 * Sabitler: Sabitlet için **screaming snake case** kullanılır.                                                            
 `Örnek:` HELLO_WORLD 
 
-## Değişken İsimlendirmede Dikkat Edilmesi Gerekenler
+##Değişken İsimlendirmede Dikkat Edilmesi Gerekenler
 
 * Değişkenler kullanılan dilin syntaxında var olan kelimeleri alamazlar.                                                  
 `Örnek:` int = 2;
