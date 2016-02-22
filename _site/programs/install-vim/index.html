@@ -1,0 +1,260 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Vim Kurulumu ve Kullanımı &#8211; Kaan Osman Arslan</title>
+<meta name="description" content="Ubuntuya vim kurulumu ve kullanımı">
+<meta name="keywords" content="vim, editors, programming, coding">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Vim Kurulumu ve Kullanımı">
+<meta name="twitter:description" content="Ubuntuya vim kurulumu ve kullanımı">
+<meta name="twitter:site" content="@kaanosmanarslan">
+<meta name="twitter:creator" content="@kaanosmanarslan">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://kaanosman.github.io/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="tr-TR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vim Kurulumu ve Kullanımı">
+<meta property="og:description" content="Ubuntuya vim kurulumu ve kullanımı">
+<meta property="og:url" content="http://kaanosman.github.io/programs/install-vim/">
+<meta property="og:site_name" content="Kaan Osman Arslan">
+
+<meta property="og:image" content="http://kaanosman.github.io/images/default-thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="http://kaanosman.github.io/programs/install-vim/">
+<link href="http://kaanosman.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Kaan Osman Arslan Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://kaanosman.github.io/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://kaanosman.github.io/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://kaanosman.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://kaanosman.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://kaanosman.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://kaanosman.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://kaanosman.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://kaanosman.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://kaanosman.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://kaanosman.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://kaanosman.github.io/">Kaan Osman Arslan</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+				    
+				    <li><a href="http://kaanosman.github.io/about/" >Hakkımda</a></li>
+				
+				    
+				    <li><a href="http://kaanosman.github.io/posts/" >Yazılarım</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://kaanosman.github.io/images/kaan.jpg" class="bio-photo" alt="Kaan Osman Arslan bio photo">
+
+
+  <h3 itemprop="name">Kaan Osman Arslan</h3>
+  <p>Bilgisayar Mühendisi</p>
+  <a href="mailto:kaanosmanarslan@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/kaanosmanarslan" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  <a href="http://facebook.com/kaanosmanarslan" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>
+  
+  <a href="http://linkedin.com/in/kaanosman" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  
+  
+  
+  <a href="http://github.com/kaanosman" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://kaanosman.github.io/programs/install-vim/" rel="bookmark" title="Vim Kurulumu ve Kullanımı">Vim Kurulumu ve Kullanımı</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>Vim vi metin düzenleyici temel alınarak yazılmış açık kaynaklı bir yazılımdır. Özellikle linuxda komut satırından çalışmayı sevenler için kullanışlı bir metin editörüdür. Başlangıçda öğrenmesi biraz zor olsa da öğrendikten sonra alışkanlık haline gelir. Eklenti sayısının çok olması ve çok çeşitli ayarlamalar yaparak kişiselleştirebilmeye imkan tanıması güzel özelliklerindendir.</p>
+
+<p>Vimde değişik kipler vardır. Bunlar komut kipi, yazma kipi ve görünüm kipleridir.</p>
+
+<ul>
+  <li>
+    <p>Komut Kipi : Dosya ilk açıldığında bu kiptedir. Eğer en altta dosya ismi gözüküyorsa bu kipte olduğumuzu anlarız. Başka bir kipteyken <strong>esc</strong>
+tuşuna basarak bu kipe geçiş yapabiliriz.</p>
+  </li>
+  <li>
+    <p>Yazma Kipi : Klavyedeki <strong>i(insert)</strong> tuşuna basarak bu kipe geçiş yapabiliriz. En altta INSERT yazıyorsa bu kipte olduğumuzu anlarız. Bu kipteyken dosyaya yazma işlemini yapabiliriz.</p>
+  </li>
+  <li>
+    <p>Görünüm Kipi : Eğer terminalin en altında VISUAL yazıyorsa bu kipte olduğumuzu anlarız. Sadece dosyayı görüntüleme içindir değişiklik yapılamaz. <strong>v</strong> tuşuna basılarak bu kipe geçilir.</p>
+  </li>
+</ul>
+
+<h2 id="ubuntuda-vim-kurulumu">Ubuntuda Vim Kurulumu</h2>
+
+<p><strong>sudo apt-get install vim</strong> komutunu yazdıktan sonra sudo parolanızı girin.</p>
+
+<h2 id="ayarlamalar">Ayarlamalar</h2>
+
+<p>Vim editörünü bazı ayarlamalar yaparak çok daha kullanışlı hale getirebilirsiniz. Vim ayarlamalarını yapmak için .vimrc dosyasını kullanmalısınız. Bu dosyanın bilgisayarınızda nerede olduğunu bulmak için vim editörünü açıp esc tuşuna basarak komut kipine geçin ve <strong>:version</strong> yazın. Ekrana gelen çıktıda .vimrc dosyasının nerede bulunduğunu görebilirsiniz. Büyük ihtimalle <strong>$Home/.vimrc</strong> dizininde bulunur ama kontrol etmekte fayda var. Vim yönetici kipindeyken <strong>:e $Home/.vimrc</strong> komutuyla vimrc dosyasını açın. Ayarlar için aşağıdaki linkten yararlanabilirsiniz.</p>
+
+<p><a href="http://vimconfig.com/">vimrc ayarları</a></p>
+
+<p>Ayarların bazılarını aşağıda açıklayalım.</p>
+
+<ul>
+  <li>set number =&gt; satır numaralarının gözükmesini sağlar.</li>
+  <li>syntax on =&gt; dosya uzantısına göre renklendirme yapar.</li>
+  <li>set is =&gt; aranılacak kelime yazılırken bulmaya başlar.</li>
+  <li>set ic =&gt; büyük-küçük harf ayrımı yapmadan arar.</li>
+  <li>set hls =&gt; sayfada arama yapılan kelimeleri beirginleştirir.</li>
+  <li>set encoding=utf-8 =&gt; dosyanın otomatik utf8 formatında olmasını sağlar.</li>
+  <li>set tabstop=8 =&gt; tab uzunluğunu 8 karakter yapar.</li>
+  <li>set autoindent =&gt; girintileme özelliğini aktifleştirir.</li>
+</ul>
+
+<h2 id="kullanm">Kullanım</h2>
+
+<p>Vim editöründe bir dosya açmak için terminali açın ve <strong>vim dosya_adı.uzantısı</strong> şeklinde dosyanın adını ve uzantısını belirtin. Vim uzantıya göre renklendirme yapacaktır. Daha sonra insert moduna geçip kodunuzu yazabilirsiniz.</p>
+
+<ul>
+  <li>Dosyayı kaydetmeden çıkmak için <strong>:q</strong></li>
+  <li>Dosyayı kaydet ve çık için <strong>:wq</strong></li>
+  <li>Dosyayı kaydet ama çıkma <strong>:w</strong></li>
+  <li>İki yatay dosya açmak için <strong>vim -o dosya1.uzantı dosya2.uzantı</strong></li>
+  <li>İki dikey dosya açmak için <strong>vim -O dosya1.uzantı dosya2.uzantı</strong></li>
+  <li>İki dosya arası geçiş yapmak için <strong>ctrl+w</strong></li>
+</ul>
+
+<p>komutları kullanılır.</p>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <p class="byline"><strong>Vim Kurulumu ve Kullanımı</strong> was published on <time datetime="2016-02-21T00:00:00+02:00">February 21, 2016</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://kaanosman.github.io/posts/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://kaanosman.github.io/programs/install-git/" title="Git Kurulumu ve Kullanımı">Git Kurulumu ve Kullanımı</a></li>
+    
+      <li><a href="http://kaanosman.github.io/coding-standarts/naming-convention/" title="İsimlendirme Kuralları(Naming Convention)">İsimlendirme Kuralları(Naming Convention)</a></li>
+    
+      <li><a href="http://kaanosman.github.io/coding-standarts/indent-style/" title="Girintileme Stilleri(Indent Styles)">Girintileme Stilleri(Indent Styles)</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  
+  <footer>
+    
+
+<span>&copy; 2016 Kaan Osman Arslan. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://kaanosman.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://kaanosman.github.io/assets/js/scripts.min.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-72219425-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  
+
+
+
+
+</body>
+</html>

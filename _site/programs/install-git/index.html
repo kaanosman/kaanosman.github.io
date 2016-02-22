@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Ruby Kurulumu &#8211; Kaan Osman Arslan</title>
-<meta name="description" content="Ubunyu'ya ruby version 2.0.0> kurulması">
-<meta name="keywords" content="ruby, install, source">
+<title>Git Kurulumu ve Kullanımı &#8211; Kaan Osman Arslan</title>
+<meta name="description" content="Ubuntuda git kurulumu ve kullanımı">
+<meta name="keywords" content="git, github, cvs, version">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Ruby Kurulumu">
-<meta name="twitter:description" content="Ubunyu'ya ruby version 2.0.0> kurulması">
+<meta name="twitter:title" content="Git Kurulumu ve Kullanımı">
+<meta name="twitter:description" content="Ubuntuda git kurulumu ve kullanımı">
 <meta name="twitter:site" content="@kaanosmanarslan">
 <meta name="twitter:creator" content="@kaanosmanarslan">
 
@@ -22,9 +22,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="tr-TR">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ruby Kurulumu">
-<meta property="og:description" content="Ubunyu'ya ruby version 2.0.0> kurulması">
-<meta property="og:url" content="http://kaanosman.github.io/ruby/install-ruby/">
+<meta property="og:title" content="Git Kurulumu ve Kullanımı">
+<meta property="og:description" content="Ubuntuda git kurulumu ve kullanımı">
+<meta property="og:url" content="http://kaanosman.github.io/programs/install-git/">
 <meta property="og:site_name" content="Kaan Osman Arslan">
 
 <meta property="og:image" content="http://kaanosman.github.io/images/default-thumb.png">
@@ -34,7 +34,7 @@
 
 
 
-<link rel="canonical" href="http://kaanosman.github.io/ruby/install-ruby/">
+<link rel="canonical" href="http://kaanosman.github.io/programs/install-git/">
 <link href="http://kaanosman.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Kaan Osman Arslan Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -137,16 +137,59 @@
   <article class="post">
     <div class="headline-wrap">
       
-        <h1><a href="http://kaanosman.github.io/ruby/install-ruby/" rel="bookmark" title="Ruby Kurulumu">Ruby Kurulumu</a></h1>
+        <h1><a href="http://kaanosman.github.io/programs/install-git/" rel="bookmark" title="Git Kurulumu ve Kullanımı">Git Kurulumu ve Kullanımı</a></h1>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>Rubynin şu an en son kararlı sürümü 2.2.4 olmasına rağmen ubuntu depolarında 1.9.3 sürümü bulunuyor. <code>sudo apt-get install ruby-full</code> diye kurduğumuzda da 1.9.3 sürümü kuruluyor. Jekyll 3 gibi ruby 2.0.0 ve üstü ruby sürümü gerektiren bir uygulamayla uğraşıyorsanız hata almamanız için istenen ruby sürümünü kurmanız gerekir.Bunun için ilk önce <a href="https://www.ruby-lang.org/tr/downloads/">link</a> adresinden rubynin kaynak dosyasını indirmeniz gerekir.</p>
+      <p>Git bir versiyon kontrol ve kaynak kod yönetim sistemidir. Linus Torvalds tarafından geliştirilmiştir. Çok kişinin çalıştığı projelerde uyumlu bir şekilde çalışma yapılmasını sağlar.</p>
+
+<h2 id="ubuntuda-git-kurulumu">Ubuntuda Git Kurulumu</h2>
+
+<ul>
+  <li><strong>sudo apt-get install git</strong> komutunu yazdıktan sonra sudo parolanızı girin.</li>
+  <li>Daha sonra terminale <strong>ssh-keygen</strong> komutunu yazarak açık ve gizli anahtarınızı üretin.(ssh ile bağlanmak için)</li>
+  <li><strong>gedit .ssh/id_rsa.pub</strong> komutu ile geditte açılan açık anahtar kodunuzu kopyalayın. Bu kodu githubdaki settings-&gt;ssh keys-&gt;new ssh key bölümüne yapıştırıp kaydedin.</li>
+</ul>
+
+<h2 id="ayarlamalar">Ayarlamalar</h2>
+
+<p>Git kurulduktan sonra aşağıdaki komular ile ayarlamalarını yapabilirsiniz.</p>
+
+<ul>
+  <li>git config –global user.name “username” =&gt; git için kullanıcı adı</li>
+  <li>git config –global user.email mail@gmail.com =&gt; git için email</li>
+  <li>git config –global core.editor vim =&gt; git için standart editör</li>
+  <li>git config –global merge.tool diffmerge =&gt; git için standart karşılaştırıcı</li>
+</ul>
+
+<p>Aşağıdaki linkten daha detaylı ayarlarını bulabilirsiniz.</p>
+
+<p><a href="https://git-scm.com/book/tr/v2/Customizing-Git-Git-Configuration">git ayarları</a></p>
+
+<h2 id="alma-mant">Çalışma Mantığı</h2>
+
+<p>Gitin çalışma mantığında proje üç dizine ayrılır. Bunlar çalışma dizini, stage ve head dizinleridir.</p>
+
+<ul>
+  <li>
+    <p>Çalışma Dizini : Git init diyerek projemize giti dahil ederiz. Daha sonra yapacağımız değişiklikler gitin çalışma dizinine kaydedilir. Çalışma dizininden stage dizinine aktarmak için <strong>git add file_name</strong> komutu kullanılır. Bütün değişiklikleri atmak için <strong>git add .</strong> komutu kullanılabilir.</p>
+  </li>
+  <li>
+    <p>Stage Dizini : Çalışma dizininde git add komutu ile bu dizine geçilir. Bu dizinden ise <strong>git commit -m “commit message”</strong> komutu ile head dizinine geçilir.</p>
+  </li>
+  <li>
+    <p>Head Dizini : Bu dizin projenin gönderilmeden önceki son durağıdır. <strong>git push origin master</strong> komutu ile proje githuba gönderilir.</p>
+  </li>
+</ul>
+
+<h2 id="kullanm">Kullanım</h2>
+
+<p>Öncelikle <a href="https://github.com/">githuba</a> üye olun. Daha sonra sağ üstteki + işaretine tıklayarak new repository seçeneğini seçin ve bir repo oluşturun. Daha sonra localdeki projenizin içine girip <strong>git init</strong> komutunu çalıştırarak projenize giti ekleyin. Localinizdeki proje ile uzak deponuzun haberleşebilmesi için <strong>git remote add origin https://github.com/user/repo.git</strong> komutu ile remote eklemeniz gerekir.</p>
 
 
       <hr />
       <footer role="contentinfo">
-        <p class="byline"><strong>Ruby Kurulumu</strong> was published on <time datetime="2015-12-20T00:00:00+02:00">December 20, 2015</time>.</p>
+        <p class="byline"><strong>Git Kurulumu ve Kullanımı</strong> was published on <time datetime="2016-02-22T00:00:00+02:00">February 22, 2016</time>.</p>
       </footer>
     </div><!-- /.article-wrap -->
   
@@ -155,10 +198,24 @@
 
 <div class="footer-wrap">
   
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://kaanosman.github.io/posts/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://kaanosman.github.io/programs/install-vim/" title="Vim Kurulumu ve Kullanımı">Vim Kurulumu ve Kullanımı</a></li>
+    
+      <li><a href="http://kaanosman.github.io/coding-standarts/naming-convention/" title="İsimlendirme Kuralları(Naming Convention)">İsimlendirme Kuralları(Naming Convention)</a></li>
+    
+      <li><a href="http://kaanosman.github.io/coding-standarts/indent-style/" title="Girintileme Stilleri(Indent Styles)">Girintileme Stilleri(Indent Styles)</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  
   <footer>
     
 
-<span>&copy; 2015 Kaan Osman Arslan. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+<span>&copy; 2016 Kaan Osman Arslan. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
 
   </footer>
 </div><!-- /.footer-wrap -->
@@ -166,6 +223,22 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="http://kaanosman.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="http://kaanosman.github.io/assets/js/scripts.min.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-72219425-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 
   
