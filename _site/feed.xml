@@ -4,13 +4,153 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://kaanosman.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://kaanosman.github.io" />
-<updated>2016-02-22T23:24:04+02:00</updated>
+<updated>2016-02-23T00:38:45+02:00</updated>
 <id>http://kaanosman.github.io/</id>
 <author>
   <name>Kaan Osman Arslan</name>
   <uri>http://kaanosman.github.io/</uri>
   <email>kaanosmanarslan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[LEMP Stack Kurulumu]]></title>
+  <link rel="alternate" type="text/html" href="http://kaanosman.github.io/programs/install-lemp-stack/" />
+  <id>http://kaanosman.github.io/programs/install-lemp-stack</id>
+  <published>2016-02-23T00:00:00+02:00</published>
+  <updated>2016-02-23T00:00:00+02:00</updated>
+  <author>
+    <name>Kaan Osman Arslan</name>
+    <uri>http://kaanosman.github.io</uri>
+    <email>kaanosmanarslan@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;LEMP stack linux üzerinde &lt;a href=&quot;http://nginx.org/&quot;&gt;nginx&lt;/a&gt;, &lt;a href=&quot;https://www.mysql.com/&quot;&gt;Mysql&lt;/a&gt; ve &lt;a href=&quot;http://php.net/&quot;&gt;Php&lt;/a&gt; kullanarak uygulama geliştirmeye yarayan programlar topluluğudur. Web sunucu olarak nginx kullanır. Nginx hızlı, yüksek performanslı, ücretsiz, düşük cpu ve ram kullanan bir web sunucu olduğu için alternatiflerine göre(apache, lighthttp, litespeed, zeus) kullanım oranı son yıllarda gittikçe artmaktadır. Mysql ise oldukça hızlı ve dökümantasyonu zengin bir veri tabanıdır. Php ise web uygulamaları oluşturmak için biçilmiş kaftandır diyebiliriz. Bütün bunları yazacağımız işletim sistemi tabi ki linux olamalı.&lt;/p&gt;
+
+&lt;h4 id=&quot;nginx-kurulumu&quot;&gt;1)Nginx Kurulumu&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sudo apt-get install nginx&lt;/li&gt;
+  &lt;li&gt;sudo service nginx start&lt;/li&gt;
+  &lt;li&gt;http://localhost&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;mysql-kurulumu&quot;&gt;2) Mysql Kurulumu&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sudo apt-get install mysql-server php5-mysql&lt;/li&gt;
+  &lt;li&gt;sudo mysql_install_db&lt;/li&gt;
+  &lt;li&gt;sudo /usr/bin/mysql_secure_installation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;php-kurulumu&quot;&gt;3)Php Kurulumu&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sudo apt-get install php5-fpm fhp5-cli&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;php-ayarlar&quot;&gt;4)Php Ayarları&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sudo gedit /etc/php5/fpm/php.ini dosyasını açıp &lt;strong&gt;CGİ.FİX_PATHİNFO=1&lt;/strong&gt; satırını bulup değeri 1 ise 0 yapmalıyız.&lt;/li&gt;
+  &lt;li&gt;sudo service restart php5-fpm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;nginx-ayarlar&quot;&gt;5)Nginx Ayarları&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sudo gedit /etc/nginx/sites-available/default&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;server {&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;listen 80 default_server;
+listen [::]:80 default_server ipv6only=on;
+
+root /usr/share/nginx/html;
+index index.php index.html index.htm;
+
+# Make site accessible from http://localhost/
+server_name localhost;
+
+location / {
+	# First attempt to serve request as file, then
+	# as directory, then fall back to displaying a 404.
+	try_files $uri $uri/ =404;
+	# Uncomment to enable naxsi on this location
+	# include /etc/nginx/naxsi.rules
+}
+
+# Only for nginx-naxsi used with nginx-naxsi-ui : process denied requests
+#location /RequestDenied {
+#	proxy_pass http://127.0.0.1:8080;    
+#}
+
+error_page 404 /404.html;
+
+# redirect server error pages to the static page /50x.html
+#
+#error_page 500 502 503 504 /50x.html;
+location = /50x.html {
+	root /usr/share/nginx/html;
+}
+
+# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+#
+location ~ \.php$ {
+	fastcgi_split_path_info ^(.+\.php)(/.+)$;
+#	# NOTE: You should have &quot;cgi.fix_pathinfo = 0;&quot; in php.ini
+#
+#	# With php5-cgi alone:
+#	fastcgi_pass 127.0.0.1:9000;
+#	# With php5-fpm:
+	fastcgi_pass unix:/var/run/php5-fpm.sock;
+	fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+	include fastcgi_params;
+}
+
+# deny access to .htaccess files, if Apache&#39;s document root
+# concurs with nginx&#39;s one
+#
+#location ~ /\.ht {
+#	deny all;
+#}
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sudo service nginx restart&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;nginx-root-klasr-deitirmetercihen&quot;&gt;6)Nginx Root Klasör Değiştirme(Tercihen)&lt;/h4&gt;
+
+&lt;p&gt;Nginxin varsayılan root klasörü &lt;strong&gt;/usr/share/nginx/html&lt;/strong&gt; klasörüdür. Yani browsera http://localhost yazdığımızda bu klasörün içindeki index.php çalışır. Root klasörünü izin vererek kullanabilirsiniz ama kendi oluşturduğunuz çalışma dizininizi root klasörü yapmanız daha kullanışlı olur. Bunun için ;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sudo gedit /etc/nginx/sites-available/default&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;komutunu çalıştırıp açılan sayfada &lt;strong&gt;root /usr/share/nginx/html;&lt;/strong&gt; yazan yeri çalışma dizininizin pathi ile değiştirmelisiniz. Örneğin home dizini altında php klasörü oluşturup onu root yapmak için &lt;strong&gt;root /home/username/php;&lt;/strong&gt; şeklinde değiştirmelisiniz.&lt;/p&gt;
+
+&lt;h4 id=&quot;phpmyadmin-kurulumu&quot;&gt;7)Phpmyadmin Kurulumu&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sudo apt-get install phpmyadmin&lt;/li&gt;
+  &lt;li&gt;sudo php5enmod mcrypt&lt;/li&gt;
+  &lt;li&gt;sudo service php5-fpm restart&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Eğer 6. aşamadaki root klasörü değiştirme işlemi yaptıysanız&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sudo ln -s /usr/share/phpmyadmin /home/username/php&lt;/li&gt;
+&lt;/ul&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://kaanosman.github.io/programs/install-lemp-stack/&quot;&gt;LEMP Stack Kurulumu&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanosman.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on February 23, 2016.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
