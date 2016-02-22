@@ -18,6 +18,21 @@
   
     
     <url>
+      <loc>http://kaanosman.github.io/i/</loc>
+      
+        <lastmod>2016-02-23T00:00:00+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>http://kaanosman.github.io/programs/install-git/</loc>
       
         <lastmod>2016-02-22T00:00:00+02:00</lastmod>
