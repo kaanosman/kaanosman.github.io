@@ -1,0 +1,327 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>LEMP Stack Kurulumu &#8211; Kaan Osman Arslan</title>
+<meta name="description" content="Ubuntuya LEMP Stack kurulumu">
+<meta name="keywords" content="lemp, stack, linux, nginx, mysql, php">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="LEMP Stack Kurulumu">
+<meta name="twitter:description" content="Ubuntuya LEMP Stack kurulumu">
+<meta name="twitter:site" content="@kaanosmanarslan">
+<meta name="twitter:creator" content="@kaanosmanarslan">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://kaanosman.github.io/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="tr-TR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LEMP Stack Kurulumu">
+<meta property="og:description" content="Ubuntuya LEMP Stack kurulumu">
+<meta property="og:url" content="http://kaanosman.github.io/programs/install-lemp-stack/">
+<meta property="og:site_name" content="Kaan Osman Arslan">
+
+<meta property="og:image" content="http://kaanosman.github.io/images/default-thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="http://kaanosman.github.io/programs/install-lemp-stack/">
+<link href="http://kaanosman.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Kaan Osman Arslan Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://kaanosman.github.io/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://kaanosman.github.io/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://kaanosman.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://kaanosman.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://kaanosman.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://kaanosman.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://kaanosman.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://kaanosman.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://kaanosman.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://kaanosman.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://kaanosman.github.io/">Kaan Osman Arslan</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+				    
+				    <li><a href="http://kaanosman.github.io/about/" >Hakkımda</a></li>
+				
+				    
+				    <li><a href="http://kaanosman.github.io/posts/" >Tüm Yazılarım</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://kaanosman.github.io/images/kaan.jpg" class="bio-photo" alt="Kaan Osman Arslan bio photo">
+
+
+  <h3 itemprop="name">Kaan Osman Arslan</h3>
+  <p>Bilgisayar Mühendisi</p>
+  <a href="mailto:kaanosmanarslan@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/kaanosmanarslan" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  <a href="http://facebook.com/kaanosmanarslan" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>
+  
+  <a href="http://linkedin.com/in/kaanosman" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  
+  
+  
+  <a href="http://github.com/kaanosman" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  <a href="http://stackoverflow.com/users/4872501/kaanosman   from a "http://stackoverflow.com/users/4872501/kaanosman" link" class="author-social" target="_blank"><i class="fa fa-fw fa-stack-overflow"></i> Stackoverflow</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://kaanosman.github.io/programs/install-lemp-stack/" rel="bookmark" title="LEMP Stack Kurulumu">LEMP Stack Kurulumu</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>LEMP stack linux üzerinde <a href="http://nginx.org/">nginx</a>, <a href="https://www.mysql.com/">Mysql</a> ve <a href="http://php.net/">Php</a> kullanarak uygulama geliştirmeye yarayan programlar topluluğudur. Web sunucu olarak nginx kullanır. Nginx hızlı, yüksek performanslı, ücretsiz, düşük cpu ve ram kullanan bir web sunucu olduğu için alternatiflerine göre(apache, lighthttp, litespeed, zeus) kullanım oranı son yıllarda gittikçe artmaktadır. Mysql ise oldukça hızlı ve dökümantasyonu zengin bir veri tabanıdır. Php ise web uygulamaları oluşturmak için biçilmiş kaftandır diyebiliriz. Bütün bunları yazacağımız işletim sistemi tabi ki linux olamalı.</p>
+
+<h4 id="nginx-kurulumu">1)Nginx Kurulumu</h4>
+
+<ul>
+  <li>sudo apt-get install nginx</li>
+  <li>sudo service nginx start</li>
+  <li>http://localhost</li>
+</ul>
+
+<h4 id="mysql-kurulumu">2) Mysql Kurulumu</h4>
+
+<ul>
+  <li>sudo apt-get install mysql-server php5-mysql</li>
+  <li>sudo mysql_install_db</li>
+  <li>sudo /usr/bin/mysql_secure_installation</li>
+</ul>
+
+<h4 id="php-kurulumu">3)Php Kurulumu</h4>
+
+<ul>
+  <li>sudo apt-get install php5-fpm fhp5-cli</li>
+</ul>
+
+<h4 id="php-ayarlar">4)Php Ayarları</h4>
+
+<ul>
+  <li>sudo gedit /etc/php5/fpm/php.ini dosyasını açıp <strong>CGİ.FİX_PATHİNFO=1</strong> satırını bulup değeri 1 ise 0 yapmalıyız.</li>
+  <li>sudo service restart php5-fpm</li>
+</ul>
+
+<h4 id="nginx-ayarlar">5)Nginx Ayarları</h4>
+
+<ul>
+  <li>sudo gedit /etc/nginx/sites-available/default</li>
+</ul>
+
+<p>server {</p>
+
+<pre><code>listen 80 default_server;
+listen [::]:80 default_server ipv6only=on;
+
+root /usr/share/nginx/html;
+index index.php index.html index.htm;
+
+# Make site accessible from http://localhost/
+server_name localhost;
+
+location / {
+	# First attempt to serve request as file, then
+	# as directory, then fall back to displaying a 404.
+	try_files $uri $uri/ =404;
+	# Uncomment to enable naxsi on this location
+	# include /etc/nginx/naxsi.rules
+}
+
+# Only for nginx-naxsi used with nginx-naxsi-ui : process denied requests
+#location /RequestDenied {
+#	proxy_pass http://127.0.0.1:8080;    
+#}
+
+error_page 404 /404.html;
+
+# redirect server error pages to the static page /50x.html
+#
+#error_page 500 502 503 504 /50x.html;
+location = /50x.html {
+	root /usr/share/nginx/html;
+}
+
+# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+#
+location ~ \.php$ {
+	fastcgi_split_path_info ^(.+\.php)(/.+)$;
+#	# NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
+#
+#	# With php5-cgi alone:
+#	fastcgi_pass 127.0.0.1:9000;
+#	# With php5-fpm:
+	fastcgi_pass unix:/var/run/php5-fpm.sock;
+	fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+	include fastcgi_params;
+}
+
+# deny access to .htaccess files, if Apache's document root
+# concurs with nginx's one
+#
+#location ~ /\.ht {
+#	deny all;
+#}
+    }
+</code></pre>
+
+<ul>
+  <li>sudo service nginx restart</li>
+</ul>
+
+<h4 id="nginx-root-klasr-deitirmetercihen">6)Nginx Root Klasör Değiştirme(Tercihen)</h4>
+
+<p>Nginxin varsayılan root klasörü <strong>/usr/share/nginx/html</strong> klasörüdür. Yani browsera http://localhost yazdığımızda bu klasörün içindeki index.php çalışır. Root klasörünü izin vererek kullanabilirsiniz ama kendi oluşturduğunuz çalışma dizininizi root klasörü yapmanız daha kullanışlı olur. Bunun için ;</p>
+
+<ul>
+  <li>sudo gedit /etc/nginx/sites-available/default</li>
+</ul>
+
+<p>komutunu çalıştırıp açılan sayfada <strong>root /usr/share/nginx/html;</strong> yazan yeri çalışma dizininizin pathi ile değiştirmelisiniz. Örneğin home dizini altında php klasörü oluşturup onu root yapmak için <strong>root /home/username/php;</strong> şeklinde değiştirmelisiniz.</p>
+
+<h4 id="phpmyadmin-kurulumu">7)Phpmyadmin Kurulumu</h4>
+
+<ul>
+  <li>sudo apt-get install phpmyadmin</li>
+  <li>sudo php5enmod mcrypt</li>
+  <li>sudo service php5-fpm restart</li>
+</ul>
+
+<p><strong>Eğer 6. aşamadaki root klasörü değiştirme işlemi yaptıysanız</strong></p>
+
+<ul>
+  <li>sudo ln -s /usr/share/phpmyadmin /home/username/php</li>
+</ul>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <p class="byline"><strong>LEMP Stack Kurulumu</strong> was published on <time datetime="2016-02-23T00:00:00+02:00">February 23, 2016</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://kaanosman.github.io/posts/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://kaanosman.github.io/i/" title="LEMP Stack Kurulumu">LEMP Stack Kurulumu</a></li>
+    
+      <li><a href="http://kaanosman.github.io/programs/install-git/" title="Git Kurulumu ve Kullanımı">Git Kurulumu ve Kullanımı</a></li>
+    
+      <li><a href="http://kaanosman.github.io/programs/install-vim/" title="Vim Kurulumu ve Kullanımı">Vim Kurulumu ve Kullanımı</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  
+  <footer>
+    
+
+<span>&copy; 2016 Kaan Osman Arslan. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://kaanosman.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://kaanosman.github.io/assets/js/scripts.min.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-72219425-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  
+
+
+
+
+</body>
+</html>

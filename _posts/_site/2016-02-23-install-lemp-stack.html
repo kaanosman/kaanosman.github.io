@@ -1,0 +1,122 @@
+<p>LEMP stack linux üzerinde <a href="http://nginx.org/">nginx</a>, <a href="https://www.mysql.com/">Mysql</a> ve <a href="http://php.net/">Php</a> kullanarak uygulama geliştirmeye yarayan programlar topluluğudur. Web sunucu olarak nginx kullanır. Nginx hızlı, yüksek performanslı, ücretsiz, düşük cpu ve ram kullanan bir web sunucu olduğu için alternatiflerine göre(apache, lighthttp, litespeed, zeus) kullanım oranı son yıllarda gittikçe artmaktadır. Mysql ise oldukça hızlı ve dökümantasyonu zengin bir veri tabanıdır. Php ise web uygulamaları oluşturmak için biçilmiş kaftandır diyebiliriz. Bütün bunları yazacağımız işletim sistemi tabi ki linux olamalı.</p>
+
+<h4 id="nginx-kurulumu">1)Nginx Kurulumu</h4>
+
+<ul>
+  <li>sudo apt-get install nginx</li>
+  <li>sudo service nginx start</li>
+  <li>http://localhost</li>
+</ul>
+
+<h4 id="mysql-kurulumu">2) Mysql Kurulumu</h4>
+
+<ul>
+  <li>sudo apt-get install mysql-server php5-mysql</li>
+  <li>sudo mysql_install_db</li>
+  <li>sudo /usr/bin/mysql_secure_installation</li>
+</ul>
+
+<h4 id="php-kurulumu">3)Php Kurulumu</h4>
+
+<ul>
+  <li>sudo apt-get install php5-fpm fhp5-cli</li>
+</ul>
+
+<h4 id="php-ayarlar">4)Php Ayarları</h4>
+
+<ul>
+  <li>sudo gedit /etc/php5/fpm/php.ini dosyasını açıp <strong>CGİ.FİX_PATHİNFO=1</strong> satırını bulup değeri 1 ise 0 yapmalıyız.</li>
+  <li>sudo service restart php5-fpm</li>
+</ul>
+
+<h4 id="nginx-ayarlar">5)Nginx Ayarları</h4>
+
+<ul>
+  <li>sudo gedit /etc/nginx/sites-available/default</li>
+</ul>
+
+<p>server {</p>
+
+<pre><code>listen 80 default_server;
+listen [::]:80 default_server ipv6only=on;
+
+root /usr/share/nginx/html;
+index index.php index.html index.htm;
+
+# Make site accessible from http://localhost/
+server_name localhost;
+
+location / {
+	# First attempt to serve request as file, then
+	# as directory, then fall back to displaying a 404.
+	try_files $uri $uri/ =404;
+	# Uncomment to enable naxsi on this location
+	# include /etc/nginx/naxsi.rules
+}
+
+# Only for nginx-naxsi used with nginx-naxsi-ui : process denied requests
+#location /RequestDenied {
+#	proxy_pass http://127.0.0.1:8080;    
+#}
+
+error_page 404 /404.html;
+
+# redirect server error pages to the static page /50x.html
+#
+#error_page 500 502 503 504 /50x.html;
+location = /50x.html {
+	root /usr/share/nginx/html;
+}
+
+# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+#
+location ~ \.php$ {
+	fastcgi_split_path_info ^(.+\.php)(/.+)$;
+#	# NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
+#
+#	# With php5-cgi alone:
+#	fastcgi_pass 127.0.0.1:9000;
+#	# With php5-fpm:
+	fastcgi_pass unix:/var/run/php5-fpm.sock;
+	fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+	include fastcgi_params;
+}
+
+# deny access to .htaccess files, if Apache's document root
+# concurs with nginx's one
+#
+#location ~ /\.ht {
+#	deny all;
+#}
+    }
+</code></pre>
+
+<ul>
+  <li>sudo service nginx restart</li>
+</ul>
+
+<h4 id="nginx-root-klasr-deitirmetercihen">6)Nginx Root Klasör Değiştirme(Tercihen)</h4>
+
+<p>Nginxin varsayılan root klasörü <strong>/usr/share/nginx/html</strong> klasörüdür. Yani browsera http://localhost yazdığımızda bu klasörün içindeki index.php çalışır. Root klasörünü izin vererek kullanabilirsiniz ama kendi oluşturduğunuz çalışma dizininizi root klasörü yapmanız daha kullanışlı olur. Bunun için ;</p>
+
+<ul>
+  <li>sudo gedit /etc/nginx/sites-available/default</li>
+</ul>
+
+<p>komutunu çalıştırıp açılan sayfada <strong>root /usr/share/nginx/html;</strong> yazan yeri çalışma dizininizin pathi ile değiştirmelisiniz. Örneğin home dizini altında php klasörü oluşturup onu root yapmak için <strong>root /home/username/php;</strong> şeklinde değiştirmelisiniz.</p>
+
+<h4 id="phpmyadmin-kurulumu">7)Phpmyadmin Kurulumu</h4>
+
+<ul>
+  <li>sudo apt-get install phpmyadmin</li>
+  <li>sudo php5enmod mcrypt</li>
+  <li>sudo service php5-fpm restart</li>
+</ul>
+
+<p><strong>Eğer 6. aşamadaki root klasörü değiştirme işlemi yaptıysanız</strong></p>
+
+<ul>
+  <li>sudo ln -s /usr/share/phpmyadmin /home/username/php</li>
+</ul>
+

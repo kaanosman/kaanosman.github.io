@@ -1,0 +1,45 @@
+<p>Git bir versiyon kontrol ve kaynak kod yönetim sistemidir. Linus Torvalds tarafından geliştirilmiştir. Çok kişinin çalıştığı projelerde uyumlu bir şekilde çalışma yapılmasını sağlar.</p>
+
+<h2 id="ubuntuda-git-kurulumu">Ubuntuda Git Kurulumu</h2>
+
+<ul>
+  <li><strong>sudo apt-get install git</strong> komutunu yazdıktan sonra sudo parolanızı girin.</li>
+  <li>Daha sonra terminale <strong>ssh-keygen</strong> komutunu yazarak açık ve gizli anahtarınızı üretin.(ssh ile bağlanmak için)</li>
+  <li><strong>gedit .ssh/id_rsa.pub</strong> komutu ile geditte açılan açık anahtar kodunuzu kopyalayın. Bu kodu githubdaki settings-&gt;ssh keys-&gt;new ssh key bölümüne yapıştırıp kaydedin.</li>
+</ul>
+
+<h2 id="ayarlamalar">Ayarlamalar</h2>
+
+<p>Git kurulduktan sonra aşağıdaki komular ile ayarlamalarını yapabilirsiniz.</p>
+
+<ul>
+  <li>git config –global user.name “username” =&gt; git için kullanıcı adı</li>
+  <li>git config –global user.email mail@gmail.com =&gt; git için email</li>
+  <li>git config –global core.editor vim =&gt; git için standart editör</li>
+  <li>git config –global merge.tool diffmerge =&gt; git için standart karşılaştırıcı</li>
+</ul>
+
+<p>Aşağıdaki linkten daha detaylı ayarlarını bulabilirsiniz.</p>
+
+<p><a href="https://git-scm.com/book/tr/v2/Customizing-Git-Git-Configuration">git ayarları</a></p>
+
+<h2 id="alma-mant">Çalışma Mantığı</h2>
+
+<p>Gitin çalışma mantığında proje üç dizine ayrılır. Bunlar çalışma dizini, stage ve head dizinleridir.</p>
+
+<ul>
+  <li>
+    <p>Çalışma Dizini : Git init diyerek projemize giti dahil ederiz. Daha sonra yapacağımız değişiklikler gitin çalışma dizinine kaydedilir. Çalışma dizininden stage dizinine aktarmak için <strong>git add file_name</strong> komutu kullanılır. Bütün değişiklikleri atmak için <strong>git add .</strong> komutu kullanılabilir.</p>
+  </li>
+  <li>
+    <p>Stage Dizini : Çalışma dizininde git add komutu ile bu dizine geçilir. Bu dizinden ise <strong>git commit -m “commit message”</strong> komutu ile head dizinine geçilir.</p>
+  </li>
+  <li>
+    <p>Head Dizini : Bu dizin projenin gönderilmeden önceki son durağıdır. <strong>git push origin master</strong> komutu ile proje githuba gönderilir.</p>
+  </li>
+</ul>
+
+<h2 id="kullanm">Kullanım</h2>
+
+<p>Öncelikle <a href="https://github.com/">githuba</a> üye olun. Daha sonra sağ üstteki + işaretine tıklayarak new repository seçeneğini seçin ve bir repo oluşturun. Daha sonra localdeki projenizin içine girip <strong>git init</strong> komutunu çalıştırarak projenize giti ekleyin. Localinizdeki proje ile uzak deponuzun haberleşebilmesi için <strong>git remote add origin https://github.com/user/repo.git</strong> komutu ile remote eklemeniz gerekir.</p>
+
