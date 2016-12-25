@@ -28,7 +28,7 @@ LEMP stack linux üzerinde [nginx](http://nginx.org/), [Mysql](https://www.mysql
 #### 4)Php Ayarları
 
 * sudo gedit /etc/php5/fpm/php.ini dosyasını açıp **CGİ.FİX_PATHİNFO=1** satırını bulup değeri 1 ise 0 yapmalıyız.
-* sudo service restart php5-fpm
+* sudo service php5-fpm restart
 
 #### 5)Nginx Ayarları
 
