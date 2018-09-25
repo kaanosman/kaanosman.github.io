@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://kaanosman.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://kaanosman.github.io" />
-<updated>2016-12-25T23:12:34+01:00</updated>
+<updated>2018-09-25T02:10:38+00:00</updated>
 <id>http://kaanosman.github.io/</id>
 <author>
   <name>Kaan Osman Arslan</name>
@@ -17,8 +17,8 @@
   <title type="html"><![CDATA[LEMP Stack Kurulumu]]></title>
   <link rel="alternate" type="text/html" href="http://kaanosman.github.io/programs/install-lemp-stack/" />
   <id>http://kaanosman.github.io/programs/install-lemp-stack</id>
-  <published>2016-02-23T00:00:00+01:00</published>
-  <updated>2016-02-23T00:00:00+01:00</updated>
+  <published>2016-02-23T00:00:00-01:00</published>
+  <updated>2016-02-23T00:00:00-01:00</updated>
   <author>
     <name>Kaan Osman Arslan</name>
     <uri>http://kaanosman.github.io</uri>
@@ -27,7 +27,7 @@
   <content type="html">
     &lt;p&gt;LEMP stack linux üzerinde &lt;a href=&quot;http://nginx.org/&quot;&gt;nginx&lt;/a&gt;, &lt;a href=&quot;https://www.mysql.com/&quot;&gt;Mysql&lt;/a&gt; ve &lt;a href=&quot;http://php.net/&quot;&gt;Php&lt;/a&gt; kullanarak uygulama geliştirmeye yarayan programlar topluluğudur. Web sunucu olarak nginx kullanır. Nginx hızlı, yüksek performanslı, ücretsiz, düşük cpu ve ram kullanan bir web sunucu olduğu için alternatiflerine göre(apache, lighthttp, litespeed, zeus) kullanım oranı son yıllarda gittikçe artmaktadır. Mysql ise oldukça hızlı ve dökümantasyonu zengin bir veri tabanıdır. Php ise web uygulamaları oluşturmak için biçilmiş kaftandır diyebiliriz. Bütün bunları yazacağımız işletim sistemi tabi ki linux olamalı.&lt;/p&gt;
 
-&lt;h4 id=&quot;nginx-kurulumu&quot;&gt;1)Nginx Kurulumu&lt;/h4&gt;
+&lt;h4 id=&quot;1nginx-kurulumu&quot;&gt;1)Nginx Kurulumu&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;sudo apt-get install nginx&lt;/li&gt;
@@ -35,7 +35,7 @@
   &lt;li&gt;http://localhost&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;mysql-kurulumu&quot;&gt;2) Mysql Kurulumu&lt;/h4&gt;
+&lt;h4 id=&quot;2-mysql-kurulumu&quot;&gt;2) Mysql Kurulumu&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;sudo apt-get install mysql-server php5-mysql&lt;/li&gt;
@@ -43,20 +43,20 @@
   &lt;li&gt;sudo /usr/bin/mysql_secure_installation&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;php-kurulumu&quot;&gt;3)Php Kurulumu&lt;/h4&gt;
+&lt;h4 id=&quot;3php-kurulumu&quot;&gt;3)Php Kurulumu&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;sudo apt-get install php5-fpm fhp5-cli&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;php-ayarlar&quot;&gt;4)Php Ayarları&lt;/h4&gt;
+&lt;h4 id=&quot;4php-ayarları&quot;&gt;4)Php Ayarları&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;sudo gedit /etc/php5/fpm/php.ini dosyasını açıp &lt;strong&gt;CGİ.FİX_PATHİNFO=1&lt;/strong&gt; satırını bulup değeri 1 ise 0 yapmalıyız.&lt;/li&gt;
   &lt;li&gt;sudo service php5-fpm restart&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;nginx-ayarlar&quot;&gt;5)Nginx Ayarları&lt;/h4&gt;
+&lt;h4 id=&quot;5nginx-ayarları&quot;&gt;5)Nginx Ayarları&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;sudo gedit /etc/nginx/sites-available/default&lt;/li&gt;
@@ -64,7 +64,7 @@
 
 &lt;p&gt;server {&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;listen 80 default_server;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;listen 80 default_server;
 listen [::]:80 default_server ipv6only=on;
 
 root /usr/share/nginx/html;
@@ -110,20 +110,20 @@ location ~ \.php$ {
 	include fastcgi_params;
 }
 
-# deny access to .htaccess files, if Apache&#39;s document root
-# concurs with nginx&#39;s one
+# deny access to .htaccess files, if Apache's document root
+# concurs with nginx's one
 #
 #location ~ /\.ht {
 #	deny all;
 #}
     }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;sudo service nginx restart&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;nginx-root-klasr-deitirmetercihen&quot;&gt;6)Nginx Root Klasör Değiştirme(Tercihen)&lt;/h4&gt;
+&lt;h4 id=&quot;6nginx-root-klasör-değiştirmetercihen&quot;&gt;6)Nginx Root Klasör Değiştirme(Tercihen)&lt;/h4&gt;
 
 &lt;p&gt;Nginxin varsayılan root klasörü &lt;strong&gt;/usr/share/nginx/html&lt;/strong&gt; klasörüdür. Yani browsera http://localhost yazdığımızda bu klasörün içindeki index.php çalışır. Root klasörünü izin vererek kullanabilirsiniz ama kendi oluşturduğunuz çalışma dizininizi root klasörü yapmanız daha kullanışlı olur. Bunun için ;&lt;/p&gt;
 
@@ -133,7 +133,7 @@ location ~ \.php$ {
 
 &lt;p&gt;komutunu çalıştırıp açılan sayfada &lt;strong&gt;root /usr/share/nginx/html;&lt;/strong&gt; yazan yeri çalışma dizininizin pathi ile değiştirmelisiniz. Örneğin home dizini altında php klasörü oluşturup onu root yapmak için &lt;strong&gt;root /home/username/php;&lt;/strong&gt; şeklinde değiştirmelisiniz.&lt;/p&gt;
 
-&lt;h4 id=&quot;phpmyadmin-kurulumu&quot;&gt;7)Phpmyadmin Kurulumu&lt;/h4&gt;
+&lt;h4 id=&quot;7phpmyadmin-kurulumu&quot;&gt;7)Phpmyadmin Kurulumu&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;sudo apt-get install phpmyadmin&lt;/li&gt;
@@ -157,8 +157,8 @@ location ~ \.php$ {
   <title type="html"><![CDATA[Git Kurulumu ve Kullanımı]]></title>
   <link rel="alternate" type="text/html" href="http://kaanosman.github.io/programs/install-git/" />
   <id>http://kaanosman.github.io/programs/install-git</id>
-  <published>2016-02-22T00:00:00+01:00</published>
-  <updated>2016-02-22T00:00:00+01:00</updated>
+  <published>2016-02-22T00:00:00-01:00</published>
+  <updated>2016-02-22T00:00:00-01:00</updated>
   <author>
     <name>Kaan Osman Arslan</name>
     <uri>http://kaanosman.github.io</uri>
@@ -190,7 +190,7 @@ location ~ \.php$ {
 
 &lt;p&gt;&lt;a href=&quot;https://git-scm.com/book/tr/v2/Customizing-Git-Git-Configuration&quot;&gt;git ayarları&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;alma-mant&quot;&gt;Çalışma Mantığı&lt;/h2&gt;
+&lt;h2 id=&quot;Çalışma-mantığı&quot;&gt;Çalışma Mantığı&lt;/h2&gt;
 
 &lt;p&gt;Gitin çalışma mantığında proje üç dizine ayrılır. Bunlar çalışma dizini, stage ve head dizinleridir.&lt;/p&gt;
 
@@ -206,7 +206,7 @@ location ~ \.php$ {
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;kullanm&quot;&gt;Kullanım&lt;/h2&gt;
+&lt;h2 id=&quot;kullanım&quot;&gt;Kullanım&lt;/h2&gt;
 
 &lt;p&gt;Öncelikle &lt;a href=&quot;https://github.com/&quot;&gt;githuba&lt;/a&gt; üye olun. Daha sonra sağ üstteki + işaretine tıklayarak new repository seçeneğini seçin ve bir repo oluşturun. Daha sonra localdeki projenizin içine girip &lt;strong&gt;git init&lt;/strong&gt; komutunu çalıştırarak projenize giti ekleyin. Localinizdeki proje ile uzak deponuzun haberleşebilmesi için &lt;strong&gt;git remote add origin https://github.com/user/repo.git&lt;/strong&gt; komutu ile remote eklemeniz gerekir.&lt;/p&gt;
 
@@ -220,8 +220,8 @@ location ~ \.php$ {
   <title type="html"><![CDATA[Vim Kurulumu ve Kullanımı]]></title>
   <link rel="alternate" type="text/html" href="http://kaanosman.github.io/programs/install-vim/" />
   <id>http://kaanosman.github.io/programs/install-vim</id>
-  <published>2016-02-21T00:00:00+01:00</published>
-  <updated>2016-02-21T00:00:00+01:00</updated>
+  <published>2016-02-21T00:00:00-01:00</published>
+  <updated>2016-02-21T00:00:00-01:00</updated>
   <author>
     <name>Kaan Osman Arslan</name>
     <uri>http://kaanosman.github.io</uri>
@@ -268,7 +268,7 @@ tuşuna basarak bu kipe geçiş yapabiliriz.&lt;/p&gt;
   &lt;li&gt;set autoindent =&amp;gt; girintileme özelliğini aktifleştirir.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;kullanm&quot;&gt;Kullanım&lt;/h2&gt;
+&lt;h2 id=&quot;kullanım&quot;&gt;Kullanım&lt;/h2&gt;
 
 &lt;p&gt;Vim editöründe bir dosya açmak için terminali açın ve &lt;strong&gt;vim dosya_adı.uzantısı&lt;/strong&gt; şeklinde dosyanın adını ve uzantısını belirtin. Vim uzantıya göre renklendirme yapacaktır. Daha sonra insert moduna geçip kodunuzu yazabilirsiniz.&lt;/p&gt;
 
@@ -293,8 +293,8 @@ tuşuna basarak bu kipe geçiş yapabiliriz.&lt;/p&gt;
   <title type="html"><![CDATA[İsimlendirme Kuralları(Naming Convention)]]></title>
   <link rel="alternate" type="text/html" href="http://kaanosman.github.io/coding-standarts/naming-convention/" />
   <id>http://kaanosman.github.io/coding-standarts/naming-convention</id>
-  <published>2016-01-09T00:00:00+01:00</published>
-  <updated>2016-01-09T00:00:00+01:00</updated>
+  <published>2016-01-09T00:00:00-01:00</published>
+  <updated>2016-01-09T00:00:00-01:00</updated>
   <author>
     <name>Kaan Osman Arslan</name>
     <uri>http://kaanosman.github.io</uri>
@@ -307,95 +307,95 @@ tuşuna basarak bu kipe geçiş yapabiliriz.&lt;/p&gt;
 
 &lt;p&gt;Camel case çok kullanılan isimlendirme kurallarından biridir. Kelimeler bitişik ve ilk harfleri büyük yazılır. İlk kelimenin ilk harfinin küçük yazıldığı olabilir.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;Örnek:&lt;/code&gt; HelloWorld&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HelloWorld&lt;/p&gt;
 
-&lt;h3 id=&quot;snake-casesnakecase&quot;&gt;Snake Case(Snake_Case)&lt;/h3&gt;
+&lt;h3 id=&quot;snake-casesnake_case&quot;&gt;Snake Case(Snake_Case)&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Upper snake case&lt;/strong&gt; ve &lt;strong&gt;lower snake case&lt;/strong&gt; olarak ikiye ayırabiliriz. Kelimeler alttire ile birbirine bağlanır.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;Upper snake case örnek:&lt;/code&gt; Hello_World&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Upper snake case örnek:&lt;/code&gt; Hello_World&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;Lower snake case örnek:&lt;/code&gt; hello_world&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Lower snake case örnek:&lt;/code&gt; hello_world&lt;/p&gt;
 
-&lt;h3 id=&quot;screaming-snake-casescreamngsnakecase&quot;&gt;Screaming snake case(SCREAMİNG_SNAKE_CASE)&lt;/h3&gt;
+&lt;h3 id=&quot;screaming-snake-casescreamİng_snake_case&quot;&gt;Screaming snake case(SCREAMİNG_SNAKE_CASE)&lt;/h3&gt;
 
 &lt;p&gt;Bütün harfleri büyük yazılır. Genellikle sabit isimlendirmede kullanılır.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;Screaming snake case örnek:&lt;/code&gt; HELLO_WORLD&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Screaming snake case örnek:&lt;/code&gt; HELLO_WORLD&lt;/p&gt;
 
 &lt;p&gt;Şimdi de bazı diller için bu kuralları örneklerle açıklayalım.&lt;/p&gt;
 
-&lt;h2 id=&quot;java-in-simlendirme-kurallar&quot;&gt;Java İçin İsimlendirme Kuralları&lt;/h2&gt;
+&lt;h2 id=&quot;java-İçin-İsimlendirme-kuralları&quot;&gt;Java İçin İsimlendirme Kuralları&lt;/h2&gt;
 
 &lt;p&gt;Java dilinde isimlendirmeler için bazı standartlar oluşturulmuştur.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Sınıflar: Sınıflar için &lt;strong&gt;upper camel case&lt;/strong&gt; kullanılır.                                                              &lt;br /&gt;
-&lt;code&gt;Örnek:&lt;/code&gt; HelloWorld&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HelloWorld&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Methodlar: Methodlar için &lt;strong&gt;lower camel case&lt;/strong&gt; kullanılır.                                                            &lt;br /&gt;
-&lt;code&gt;Örnek:&lt;/code&gt; helloWorld&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; helloWorld&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Değişkenler: Değişkenler için &lt;strong&gt;lower camel case&lt;/strong&gt; kullanılır.                                                        &lt;br /&gt;
-&lt;code&gt;Örnek:&lt;/code&gt; helloWorld&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; helloWorld&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Sabitler: Sabitler için &lt;strong&gt;screaming snake case&lt;/strong&gt; kullanılır.                                                          &lt;br /&gt;
-&lt;code&gt;Örnek:&lt;/code&gt; HELLO_WORLD&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HELLO_WORLD&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;python-ve-ruby-in-simlendirme-kurallar&quot;&gt;Python ve Ruby İçin İsimlendirme Kuralları&lt;/h2&gt;
+&lt;p&gt;##Python ve Ruby İçin İsimlendirme Kuralları&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Sınıflar ve Paketler: Classlar için &lt;strong&gt;upper camel case&lt;/strong&gt; kullanılır.                                                  &lt;br /&gt;
- &lt;code&gt;Örnek:&lt;/code&gt; HelloWorld&lt;/p&gt;
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HelloWorld&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Methodlar ve Değişkenler: Methodlar ve değişkenler için &lt;strong&gt;lower snake case&lt;/strong&gt; kullanılır.                              &lt;br /&gt;
-&lt;code&gt;Örnek:&lt;/code&gt; hello_world&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; hello_world&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Sabitler: Sabitlet için &lt;strong&gt;screaming snake case&lt;/strong&gt; kullanılır.                                                          &lt;br /&gt;
-&lt;code&gt;Örnek:&lt;/code&gt; HELLO_WORLD&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HELLO_WORLD&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;php-in-simlendirme-kurallar&quot;&gt;Php İçin İsimlendirme Kuralları&lt;/h2&gt;
+&lt;h2 id=&quot;php-İçin-İsimlendirme-kuralları&quot;&gt;Php İçin İsimlendirme Kuralları&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Sınıflar ve Paketler: Classlar için &lt;strong&gt;upper camel case&lt;/strong&gt; kullanılır.                                                  &lt;br /&gt;
-&lt;code&gt;Örnek:&lt;/code&gt; HelloWorld&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HelloWorld&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Methodlar ve Değişkenler: Methodlar ve değişkenler için &lt;strong&gt;lower camel case&lt;/strong&gt; kullanılır.                              &lt;br /&gt;
-&lt;code&gt;Örnek:&lt;/code&gt; helloWorld&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; helloWorld&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Sabitler: Sabitlet için &lt;strong&gt;screaming snake case&lt;/strong&gt; kullanılır.                                                          &lt;br /&gt;
-&lt;code&gt;Örnek:&lt;/code&gt; HELLO_WORLD&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HELLO_WORLD&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;deiken-simlendirmede-dikkat-edilmesi-gerekenler&quot;&gt;Değişken İsimlendirmede Dikkat Edilmesi Gerekenler&lt;/h2&gt;
+&lt;h2 id=&quot;değişken-İsimlendirmede-dikkat-edilmesi-gerekenler&quot;&gt;Değişken İsimlendirmede Dikkat Edilmesi Gerekenler&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Değişkenler kullanılan dilin syntaxında var olan kelimeleri alamazlar.                                                &lt;br /&gt;
-&lt;code&gt;Örnek:&lt;/code&gt; int = 2;&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; int = 2;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Değişkenler sayı ile başlayamaz.                                                                                      &lt;br /&gt;
-&lt;code&gt;Örnek:&lt;/code&gt; 5index = 9;&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; 5index = 9;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Değişkenler boşluk veya özel karakter içeremez.                                                                       &lt;br /&gt;
-&lt;code&gt;Örnek:&lt;/code&gt; index?number = 6;&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; index?number = 6;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -408,8 +408,8 @@ tuşuna basarak bu kipe geçiş yapabiliriz.&lt;/p&gt;
   <title type="html"><![CDATA[Girintileme Stilleri(Indent Styles)]]></title>
   <link rel="alternate" type="text/html" href="http://kaanosman.github.io/coding-standarts/indent-style/" />
   <id>http://kaanosman.github.io/coding-standarts/indent-style</id>
-  <published>2016-01-09T00:00:00+01:00</published>
-  <updated>2016-01-09T00:00:00+01:00</updated>
+  <published>2016-01-09T00:00:00-01:00</published>
+  <updated>2016-01-09T00:00:00-01:00</updated>
   <author>
     <name>Kaan Osman Arslan</name>
     <uri>http://kaanosman.github.io</uri>

@@ -143,7 +143,7 @@
     <div class="article-wrap">
       <p>LEMP stack linux üzerinde <a href="http://nginx.org/">nginx</a>, <a href="https://www.mysql.com/">Mysql</a> ve <a href="http://php.net/">Php</a> kullanarak uygulama geliştirmeye yarayan programlar topluluğudur. Web sunucu olarak nginx kullanır. Nginx hızlı, yüksek performanslı, ücretsiz, düşük cpu ve ram kullanan bir web sunucu olduğu için alternatiflerine göre(apache, lighthttp, litespeed, zeus) kullanım oranı son yıllarda gittikçe artmaktadır. Mysql ise oldukça hızlı ve dökümantasyonu zengin bir veri tabanıdır. Php ise web uygulamaları oluşturmak için biçilmiş kaftandır diyebiliriz. Bütün bunları yazacağımız işletim sistemi tabi ki linux olamalı.</p>
 
-<h4 id="nginx-kurulumu">1)Nginx Kurulumu</h4>
+<h4 id="1nginx-kurulumu">1)Nginx Kurulumu</h4>
 
 <ul>
   <li>sudo apt-get install nginx</li>
@@ -151,7 +151,7 @@
   <li>http://localhost</li>
 </ul>
 
-<h4 id="mysql-kurulumu">2) Mysql Kurulumu</h4>
+<h4 id="2-mysql-kurulumu">2) Mysql Kurulumu</h4>
 
 <ul>
   <li>sudo apt-get install mysql-server php5-mysql</li>
@@ -159,20 +159,20 @@
   <li>sudo /usr/bin/mysql_secure_installation</li>
 </ul>
 
-<h4 id="php-kurulumu">3)Php Kurulumu</h4>
+<h4 id="3php-kurulumu">3)Php Kurulumu</h4>
 
 <ul>
   <li>sudo apt-get install php5-fpm fhp5-cli</li>
 </ul>
 
-<h4 id="php-ayarlar">4)Php Ayarları</h4>
+<h4 id="4php-ayarları">4)Php Ayarları</h4>
 
 <ul>
   <li>sudo gedit /etc/php5/fpm/php.ini dosyasını açıp <strong>CGİ.FİX_PATHİNFO=1</strong> satırını bulup değeri 1 ise 0 yapmalıyız.</li>
   <li>sudo service php5-fpm restart</li>
 </ul>
 
-<h4 id="nginx-ayarlar">5)Nginx Ayarları</h4>
+<h4 id="5nginx-ayarları">5)Nginx Ayarları</h4>
 
 <ul>
   <li>sudo gedit /etc/nginx/sites-available/default</li>
@@ -180,7 +180,7 @@
 
 <p>server {</p>
 
-<pre><code>listen 80 default_server;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>listen 80 default_server;
 listen [::]:80 default_server ipv6only=on;
 
 root /usr/share/nginx/html;
@@ -233,13 +233,13 @@ location ~ \.php$ {
 #	deny all;
 #}
     }
-</code></pre>
+</code></pre></div></div>
 
 <ul>
   <li>sudo service nginx restart</li>
 </ul>
 
-<h4 id="nginx-root-klasr-deitirmetercihen">6)Nginx Root Klasör Değiştirme(Tercihen)</h4>
+<h4 id="6nginx-root-klasör-değiştirmetercihen">6)Nginx Root Klasör Değiştirme(Tercihen)</h4>
 
 <p>Nginxin varsayılan root klasörü <strong>/usr/share/nginx/html</strong> klasörüdür. Yani browsera http://localhost yazdığımızda bu klasörün içindeki index.php çalışır. Root klasörünü izin vererek kullanabilirsiniz ama kendi oluşturduğunuz çalışma dizininizi root klasörü yapmanız daha kullanışlı olur. Bunun için ;</p>
 
@@ -249,7 +249,7 @@ location ~ \.php$ {
 
 <p>komutunu çalıştırıp açılan sayfada <strong>root /usr/share/nginx/html;</strong> yazan yeri çalışma dizininizin pathi ile değiştirmelisiniz. Örneğin home dizini altında php klasörü oluşturup onu root yapmak için <strong>root /home/username/php;</strong> şeklinde değiştirmelisiniz.</p>
 
-<h4 id="phpmyadmin-kurulumu">7)Phpmyadmin Kurulumu</h4>
+<h4 id="7phpmyadmin-kurulumu">7)Phpmyadmin Kurulumu</h4>
 
 <ul>
   <li>sudo apt-get install phpmyadmin</li>
@@ -266,7 +266,7 @@ location ~ \.php$ {
 
       <hr />
       <footer role="contentinfo">
-        <p class="byline"><strong>LEMP Stack Kurulumu</strong> was published on <time datetime="2016-02-23T00:00:00+01:00">February 23, 2016</time>.</p>
+        <p class="byline"><strong>LEMP Stack Kurulumu</strong> was published on <time datetime="2016-02-23T00:00:00-01:00">February 23, 2016</time>.</p>
       </footer>
     </div><!-- /.article-wrap -->
   
@@ -292,7 +292,7 @@ location ~ \.php$ {
   <footer>
     
 
-<span>&copy; 2016 Kaan Osman Arslan. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+<span>&copy; 2018 Kaan Osman Arslan. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
 
   </footer>
 </div><!-- /.footer-wrap -->
