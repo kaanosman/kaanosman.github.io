@@ -2,26 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="tr">
 <title type="text">Kaan Osman Arslan</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://kaanosman.github.io/feed.xml" />
-<link rel="alternate" type="text/html" href="http://kaanosman.github.io" />
-<updated>2018-09-25T02:10:38+00:00</updated>
-<id>http://kaanosman.github.io/</id>
+<link rel="self" type="application/atom+xml" href="http://kaanarslan.github.io/feed.xml" />
+<link rel="alternate" type="text/html" href="http://kaanarslan.github.io" />
+<updated>2019-07-31T03:16:35+03:00</updated>
+<id>http://kaanarslan.github.io/</id>
 <author>
   <name>Kaan Osman Arslan</name>
-  <uri>http://kaanosman.github.io/</uri>
+  <uri>http://kaanarslan.github.io/</uri>
   <email>kaanosmanarslan@gmail.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[LEMP Stack Kurulumu]]></title>
-  <link rel="alternate" type="text/html" href="http://kaanosman.github.io/programs/install-lemp-stack/" />
-  <id>http://kaanosman.github.io/programs/install-lemp-stack</id>
-  <published>2016-02-23T00:00:00-01:00</published>
-  <updated>2016-02-23T00:00:00-01:00</updated>
+  <link rel="alternate" type="text/html" href="http://kaanarslan.github.io/programs/install-lemp-stack/" />
+  <id>http://kaanarslan.github.io/programs/install-lemp-stack</id>
+  <published>2016-02-23T00:00:00+02:00</published>
+  <updated>2016-02-23T00:00:00+02:00</updated>
   <author>
     <name>Kaan Osman Arslan</name>
-    <uri>http://kaanosman.github.io</uri>
+    <uri>http://kaanarslan.github.io</uri>
     <email>kaanosmanarslan@gmail.com</email>
   </author>
   <content type="html">
@@ -148,20 +148,20 @@ location ~ \.php$ {
 &lt;/ul&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://kaanosman.github.io/programs/install-lemp-stack/&quot;&gt;LEMP Stack Kurulumu&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanosman.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on February 23, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://kaanarslan.github.io/programs/install-lemp-stack/&quot;&gt;LEMP Stack Kurulumu&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanarslan.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on February 23, 2016.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Git Kurulumu ve Kullanımı]]></title>
-  <link rel="alternate" type="text/html" href="http://kaanosman.github.io/programs/install-git/" />
-  <id>http://kaanosman.github.io/programs/install-git</id>
-  <published>2016-02-22T00:00:00-01:00</published>
-  <updated>2016-02-22T00:00:00-01:00</updated>
+  <link rel="alternate" type="text/html" href="http://kaanarslan.github.io/programs/install-git/" />
+  <id>http://kaanarslan.github.io/programs/install-git</id>
+  <published>2016-02-22T00:00:00+02:00</published>
+  <updated>2016-02-22T00:00:00+02:00</updated>
   <author>
     <name>Kaan Osman Arslan</name>
-    <uri>http://kaanosman.github.io</uri>
+    <uri>http://kaanarslan.github.io</uri>
     <email>kaanosmanarslan@gmail.com</email>
   </author>
   <content type="html">
@@ -190,7 +190,7 @@ location ~ \.php$ {
 
 &lt;p&gt;&lt;a href=&quot;https://git-scm.com/book/tr/v2/Customizing-Git-Git-Configuration&quot;&gt;git ayarları&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;Çalışma-mantığı&quot;&gt;Çalışma Mantığı&lt;/h2&gt;
+&lt;h2 id=&quot;çalışma-mantığı&quot;&gt;Çalışma Mantığı&lt;/h2&gt;
 
 &lt;p&gt;Gitin çalışma mantığında proje üç dizine ayrılır. Bunlar çalışma dizini, stage ve head dizinleridir.&lt;/p&gt;
 
@@ -211,20 +211,20 @@ location ~ \.php$ {
 &lt;p&gt;Öncelikle &lt;a href=&quot;https://github.com/&quot;&gt;githuba&lt;/a&gt; üye olun. Daha sonra sağ üstteki + işaretine tıklayarak new repository seçeneğini seçin ve bir repo oluşturun. Daha sonra localdeki projenizin içine girip &lt;strong&gt;git init&lt;/strong&gt; komutunu çalıştırarak projenize giti ekleyin. Localinizdeki proje ile uzak deponuzun haberleşebilmesi için &lt;strong&gt;git remote add origin https://github.com/user/repo.git&lt;/strong&gt; komutu ile remote eklemeniz gerekir.&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://kaanosman.github.io/programs/install-git/&quot;&gt;Git Kurulumu ve Kullanımı&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanosman.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on February 22, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://kaanarslan.github.io/programs/install-git/&quot;&gt;Git Kurulumu ve Kullanımı&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanarslan.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on February 22, 2016.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Vim Kurulumu ve Kullanımı]]></title>
-  <link rel="alternate" type="text/html" href="http://kaanosman.github.io/programs/install-vim/" />
-  <id>http://kaanosman.github.io/programs/install-vim</id>
-  <published>2016-02-21T00:00:00-01:00</published>
-  <updated>2016-02-21T00:00:00-01:00</updated>
+  <link rel="alternate" type="text/html" href="http://kaanarslan.github.io/programs/install-vim/" />
+  <id>http://kaanarslan.github.io/programs/install-vim</id>
+  <published>2016-02-21T00:00:00+02:00</published>
+  <updated>2016-02-21T00:00:00+02:00</updated>
   <author>
     <name>Kaan Osman Arslan</name>
-    <uri>http://kaanosman.github.io</uri>
+    <uri>http://kaanarslan.github.io</uri>
     <email>kaanosmanarslan@gmail.com</email>
   </author>
   <content type="html">
@@ -284,20 +284,20 @@ tuşuna basarak bu kipe geçiş yapabiliriz.&lt;/p&gt;
 &lt;p&gt;komutları kullanılır.&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://kaanosman.github.io/programs/install-vim/&quot;&gt;Vim Kurulumu ve Kullanımı&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanosman.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on February 21, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://kaanarslan.github.io/programs/install-vim/&quot;&gt;Vim Kurulumu ve Kullanımı&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanarslan.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on February 21, 2016.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[İsimlendirme Kuralları(Naming Convention)]]></title>
-  <link rel="alternate" type="text/html" href="http://kaanosman.github.io/coding-standarts/naming-convention/" />
-  <id>http://kaanosman.github.io/coding-standarts/naming-convention</id>
-  <published>2016-01-09T00:00:00-01:00</published>
-  <updated>2016-01-09T00:00:00-01:00</updated>
+  <link rel="alternate" type="text/html" href="http://kaanarslan.github.io/coding-standarts/naming-convention/" />
+  <id>http://kaanarslan.github.io/coding-standarts/naming-convention</id>
+  <published>2016-01-09T00:00:00+02:00</published>
+  <updated>2016-01-09T00:00:00+02:00</updated>
   <author>
     <name>Kaan Osman Arslan</name>
-    <uri>http://kaanosman.github.io</uri>
+    <uri>http://kaanarslan.github.io</uri>
     <email>kaanosmanarslan@gmail.com</email>
   </author>
   <content type="html">
@@ -317,7 +317,7 @@ tuşuna basarak bu kipe geçiş yapabiliriz.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Lower snake case örnek:&lt;/code&gt; hello_world&lt;/p&gt;
 
-&lt;h3 id=&quot;screaming-snake-casescreamİng_snake_case&quot;&gt;Screaming snake case(SCREAMİNG_SNAKE_CASE)&lt;/h3&gt;
+&lt;h3 id=&quot;screaming-snake-casescreami̇ng_snake_case&quot;&gt;Screaming snake case(SCREAMİNG_SNAKE_CASE)&lt;/h3&gt;
 
 &lt;p&gt;Bütün harfleri büyük yazılır. Genellikle sabit isimlendirmede kullanılır.&lt;/p&gt;
 
@@ -325,7 +325,7 @@ tuşuna basarak bu kipe geçiş yapabiliriz.&lt;/p&gt;
 
 &lt;p&gt;Şimdi de bazı diller için bu kuralları örneklerle açıklayalım.&lt;/p&gt;
 
-&lt;h2 id=&quot;java-İçin-İsimlendirme-kuralları&quot;&gt;Java İçin İsimlendirme Kuralları&lt;/h2&gt;
+&lt;h2 id=&quot;java-i̇çin-i̇simlendirme-kuralları&quot;&gt;Java İçin İsimlendirme Kuralları&lt;/h2&gt;
 
 &lt;p&gt;Java dilinde isimlendirmeler için bazı standartlar oluşturulmuştur.&lt;/p&gt;
 
@@ -365,7 +365,7 @@ tuşuna basarak bu kipe geçiş yapabiliriz.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;php-İçin-İsimlendirme-kuralları&quot;&gt;Php İçin İsimlendirme Kuralları&lt;/h2&gt;
+&lt;h2 id=&quot;php-i̇çin-i̇simlendirme-kuralları&quot;&gt;Php İçin İsimlendirme Kuralları&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -382,7 +382,7 @@ tuşuna basarak bu kipe geçiş yapabiliriz.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;değişken-İsimlendirmede-dikkat-edilmesi-gerekenler&quot;&gt;Değişken İsimlendirmede Dikkat Edilmesi Gerekenler&lt;/h2&gt;
+&lt;h2 id=&quot;değişken-i̇simlendirmede-dikkat-edilmesi-gerekenler&quot;&gt;Değişken İsimlendirmede Dikkat Edilmesi Gerekenler&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -399,20 +399,20 @@ tuşuna basarak bu kipe geçiş yapabiliriz.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://kaanosman.github.io/coding-standarts/naming-convention/&quot;&gt;İsimlendirme Kuralları(Naming Convention)&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanosman.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on January 09, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://kaanarslan.github.io/coding-standarts/naming-convention/&quot;&gt;İsimlendirme Kuralları(Naming Convention)&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanarslan.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on January 09, 2016.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Girintileme Stilleri(Indent Styles)]]></title>
-  <link rel="alternate" type="text/html" href="http://kaanosman.github.io/coding-standarts/indent-style/" />
-  <id>http://kaanosman.github.io/coding-standarts/indent-style</id>
-  <published>2016-01-09T00:00:00-01:00</published>
-  <updated>2016-01-09T00:00:00-01:00</updated>
+  <link rel="alternate" type="text/html" href="http://kaanarslan.github.io/coding-standarts/indent-style/" />
+  <id>http://kaanarslan.github.io/coding-standarts/indent-style</id>
+  <published>2016-01-09T00:00:00+02:00</published>
+  <updated>2016-01-09T00:00:00+02:00</updated>
   <author>
     <name>Kaan Osman Arslan</name>
-    <uri>http://kaanosman.github.io</uri>
+    <uri>http://kaanarslan.github.io</uri>
     <email>kaanosmanarslan@gmail.com</email>
   </author>
   <content type="html">
@@ -538,7 +538,7 @@ tuşuna basarak bu kipe geçiş yapabiliriz.&lt;/p&gt;
 	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://kaanosman.github.io/coding-standarts/indent-style/&quot;&gt;Girintileme Stilleri(Indent Styles)&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanosman.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on January 09, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://kaanarslan.github.io/coding-standarts/indent-style/&quot;&gt;Girintileme Stilleri(Indent Styles)&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanarslan.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on January 09, 2016.&lt;/p&gt;
   </content>
 </entry>
 
