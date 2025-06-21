@@ -1,11 +1,15 @@
 ---
-layout: post
-categories: programs
 title: LEMP Stack Kurulumu
-excerpt: "Ubuntuya LEMP Stack kurulumu"
-tags: [lemp, stack, linux, nginx, mysql , php]
-comments: true
---- 
+categories:
+  - programs
+tags:
+  - lemp
+  - stack
+  - linux
+  - nginx
+  - mysql
+  - php
+---
 
 LEMP stack linux üzerinde [nginx](http://nginx.org/), [Mysql](https://www.mysql.com/) ve [Php](http://php.net/) kullanarak uygulama geliştirmeye yarayan programlar topluluğudur. Web sunucu olarak nginx kullanır. Nginx hızlı, yüksek performanslı, ücretsiz, düşük cpu ve ram kullanan bir web sunucu olduğu için alternatiflerine göre(apache, lighthttp, litespeed, zeus) kullanım oranı son yıllarda gittikçe artmaktadır. Mysql ise oldukça hızlı ve dökümantasyonu zengin bir veri tabanıdır. Php ise web uygulamaları oluşturmak için biçilmiş kaftandır diyebiliriz. Bütün bunları yazacağımız işletim sistemi tabi ki linux olamalı.
 

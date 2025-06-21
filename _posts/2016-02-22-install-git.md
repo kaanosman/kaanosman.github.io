@@ -1,11 +1,13 @@
 ---
-layout: post
-categories: programs
 title: Git Kurulumu ve Kullanımı
-excerpt: "Ubuntuda git kurulumu ve kullanımı"
-tags: [git, github, cvs, version]
-comments: true
---- 
+categories:
+  - programs
+tags:
+  - git
+  - github
+  - cvs
+  - version
+---
 
 Git bir versiyon kontrol ve kaynak kod yönetim sistemidir. Linus Torvalds tarafından geliştirilmiştir. Çok kişinin çalıştığı projelerde uyumlu bir şekilde çalışma yapılmasını sağlar. 
 

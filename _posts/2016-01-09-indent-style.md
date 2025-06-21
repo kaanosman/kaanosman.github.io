@@ -1,11 +1,15 @@
 ---
-layout: post
-categories: coding-standarts
 title: Girintileme Stilleri(Indent Styles)
-excerpt: "Girintileme Stilleri"
-tags: [indent, styles, programming, coding, standarts]
-comments: true
---- 
+categories:
+  - coding-standarts
+tags:
+  - indent
+  - styles
+  - programming
+  - coding
+  - standarts
+---
+
 Girintileme yapma kodumuzun okunurluğunu ve kalitesini arttırır. Koddaki hataların daha kolay görülmesini sağlar. Girintileme için çeşitli standartlar belirlenmiştir ve bu standartlardan birini seçip kullanmak hem bireysel hem de ekip ile yapılan geliştirmeler için önemli bir konudur.
 
 ## K&R(Kernighan&Ritchie) Style

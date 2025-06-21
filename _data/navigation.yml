@@ -1,8 +1,9 @@
-# Site navigation links
-
-- title: Hakkımda
-  url: /about/
-
-- title: Tüm Yazılarım
-  url: /posts/
-
+main:
+  - title: "Tüm Yazılarım"
+    url: /posts/
+  - title: "Kategoriler"
+    url: /categories/
+  - title: "Etiketler"
+    url: /tags/
+  - title: "Hakkımda"
+    url: /about/

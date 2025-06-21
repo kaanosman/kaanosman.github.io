@@ -1,60 +1,110 @@
-# Site wide configuration
+title: Kaan Arslan
+email: kaanosmanarslan@gmail.com
+description: Bilgisayar Mühendisi
+locale: tr-TR
 
-title:            Kaan Osman Arslan
-locale:           tr-TR
-url:		  http://kaanosman.github.io
 
+facebook: kaanosmanarslan
+twitter_username: kaanosmanarslan
+github_username: kaanosman
+minimal_mistakes_skin: dark
+search: true
 
-# Jekyll configuration
+# Build settings
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-permalink:   /:categories/:title/
-markdown:    kramdown
-highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: compressed
+include:
+  - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Plugins (previously gems:)
 plugins:
+  - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
 
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
+author:
+  name   : "Kaan Arslan"
+  avatar : "/assets/images/kaan.jpeg"
+  bio    : "Bilgisayar Mühendisi"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:kaanosmanarslan@gmail.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/kaanosman"
+    - label: "Stackoverflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: "https://stackoverflow.com/users/4872501/kaanosman"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/kaanosman"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/kaanosmanarslan"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook"
+      url: "https://facebook.com/kaanosmanarslan"
 
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/kaanosmanarslan"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/kaanosman"
+    - label: "Stackoverflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: "https://stackoverflow.com/users/4872501/kaanosman"
 
-# Site owner
-owner:
-  name: Kaan Osman Arslan
-  avatar: kaan.jpg
-  bio: "Bilgisayar Mühendisi"
-  email: kaanosmanarslan@gmail.com
-  disqus-shortname:
-  twitter: kaanosmanarslan
-  facebook: kaanosmanarslan
-  google:
-    plus: #username
-    analytics: UA-72219425-1
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
-  github: kaanosman
-  stackoverflow: 4872501/kaanosman   from a "http://stackoverflow.com/users/4872501/kaanosman" link
-  linkedin: kaanosman		  
-  xing: #username
-  instagram: #username
-  lastfm: #username
-  tumblr: #username
-  pinterest: #username
-  foursquare: #username
-  steam: #username
-  dribbble: #username
-  youtube: #username
-  soundcloud: #username
-  weibo: #username
-  flickr: #username
-  codepen: #username
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
 
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+google_analytics:
+  id: "UA-72219425-1"

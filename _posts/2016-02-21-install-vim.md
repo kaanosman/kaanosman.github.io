@@ -1,11 +1,13 @@
 ---
-layout: post
-categories: programs
 title: Vim Kurulumu ve Kullanımı
-excerpt: "Ubuntuya vim kurulumu ve kullanımı"
-tags: [vim, editors, programming, coding]
-comments: true
---- 
+categories:
+  - programs
+tags:
+  - vim
+  - editors
+  - programming
+  - coding
+---
 
 Vim vi metin düzenleyici temel alınarak yazılmış açık kaynaklı bir yazılımdır. Özellikle linuxda komut satırından çalışmayı sevenler için kullanışlı bir metin editörüdür. Başlangıçda öğrenmesi biraz zor olsa da öğrendikten sonra alışkanlık haline gelir. Eklenti sayısının çok olması ve çok çeşitli ayarlamalar yaparak kişiselleştirebilmeye imkan tanıması güzel özelliklerindendir.
 

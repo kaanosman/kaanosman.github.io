@@ -1,11 +1,14 @@
 ---
-layout: post
-categories: coding-standarts
 title: İsimlendirme Kuralları(Naming Convention)
-excerpt: "Programlamada isimlendirme kuralları"
-tags: [naming, standarts, programming, coding]
-comments: true
---- 
+categories:
+  - coding-standarts
+tags:
+  - naming
+  - standarts
+  - programming
+  - coding
+---
+
 İsimlendirme kuralları hem bireysel hem de bir ekiple yazılım geliştirenler için küçük gibi görünen ama önemli bir konudur. Bunun için belirli isimlendirme kuralları oluşturulmuştur. Namespaceler, classlar, metodlar, değişkenler ve sabitler için yazılan programlama dilinin ismilendirme kurallarını uygulamak ve mantıklı isimler vermek yazılımcılara kolaylık sağlar. Yazılım geliştirdiğimiz dilin isimlendirme kurallarını öğrenip uygulamak önemli bir detaydır. Şimdi bu kuralların neler olduğuna ve bazı dillerde nasıl uygulandığına örneklerle bakalım.
 
 ### Camel Case(CamelCase)

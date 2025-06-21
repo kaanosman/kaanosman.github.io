@@ -1,70 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="tr">
-<title type="text">Kaan Osman Arslan</title>
-<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://kaanosman.github.io/feed.xml" />
-<link rel="alternate" type="text/html" href="http://kaanosman.github.io" />
-<updated>2018-09-25T02:10:38+00:00</updated>
-<id>http://kaanosman.github.io/</id>
-<author>
-  <name>Kaan Osman Arslan</name>
-  <uri>http://kaanosman.github.io/</uri>
-  <email>kaanosmanarslan@gmail.com</email>
-</author>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-21T23:27:54+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kaan Arslan</title><subtitle>Bilgisayar Mühendisi</subtitle><author><name>Kaan Arslan</name></author><entry><title type="html">LEMP Stack Kurulumu</title><link href="http://localhost:4000/programs/install-lemp-stack/" rel="alternate" type="text/html" title="LEMP Stack Kurulumu" /><published>2016-02-23T00:00:00+02:00</published><updated>2016-02-23T00:00:00+02:00</updated><id>http://localhost:4000/programs/install-lemp-stack</id><content type="html" xml:base="http://localhost:4000/programs/install-lemp-stack/"><![CDATA[<p>LEMP stack linux üzerinde <a href="http://nginx.org/">nginx</a>, <a href="https://www.mysql.com/">Mysql</a> ve <a href="http://php.net/">Php</a> kullanarak uygulama geliştirmeye yarayan programlar topluluğudur. Web sunucu olarak nginx kullanır. Nginx hızlı, yüksek performanslı, ücretsiz, düşük cpu ve ram kullanan bir web sunucu olduğu için alternatiflerine göre(apache, lighthttp, litespeed, zeus) kullanım oranı son yıllarda gittikçe artmaktadır. Mysql ise oldukça hızlı ve dökümantasyonu zengin bir veri tabanıdır. Php ise web uygulamaları oluşturmak için biçilmiş kaftandır diyebiliriz. Bütün bunları yazacağımız işletim sistemi tabi ki linux olamalı.</p>
 
+<h4 id="1nginx-kurulumu">1)Nginx Kurulumu</h4>
 
-<entry>
-  <title type="html"><![CDATA[LEMP Stack Kurulumu]]></title>
-  <link rel="alternate" type="text/html" href="http://kaanosman.github.io/programs/install-lemp-stack/" />
-  <id>http://kaanosman.github.io/programs/install-lemp-stack</id>
-  <published>2016-02-23T00:00:00-01:00</published>
-  <updated>2016-02-23T00:00:00-01:00</updated>
-  <author>
-    <name>Kaan Osman Arslan</name>
-    <uri>http://kaanosman.github.io</uri>
-    <email>kaanosmanarslan@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;LEMP stack linux üzerinde &lt;a href=&quot;http://nginx.org/&quot;&gt;nginx&lt;/a&gt;, &lt;a href=&quot;https://www.mysql.com/&quot;&gt;Mysql&lt;/a&gt; ve &lt;a href=&quot;http://php.net/&quot;&gt;Php&lt;/a&gt; kullanarak uygulama geliştirmeye yarayan programlar topluluğudur. Web sunucu olarak nginx kullanır. Nginx hızlı, yüksek performanslı, ücretsiz, düşük cpu ve ram kullanan bir web sunucu olduğu için alternatiflerine göre(apache, lighthttp, litespeed, zeus) kullanım oranı son yıllarda gittikçe artmaktadır. Mysql ise oldukça hızlı ve dökümantasyonu zengin bir veri tabanıdır. Php ise web uygulamaları oluşturmak için biçilmiş kaftandır diyebiliriz. Bütün bunları yazacağımız işletim sistemi tabi ki linux olamalı.&lt;/p&gt;
+<ul>
+  <li>sudo apt-get install nginx</li>
+  <li>sudo service nginx start</li>
+  <li>http://localhost</li>
+</ul>
 
-&lt;h4 id=&quot;1nginx-kurulumu&quot;&gt;1)Nginx Kurulumu&lt;/h4&gt;
+<h4 id="2-mysql-kurulumu">2) Mysql Kurulumu</h4>
 
-&lt;ul&gt;
-  &lt;li&gt;sudo apt-get install nginx&lt;/li&gt;
-  &lt;li&gt;sudo service nginx start&lt;/li&gt;
-  &lt;li&gt;http://localhost&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>sudo apt-get install mysql-server php5-mysql</li>
+  <li>sudo mysql_install_db</li>
+  <li>sudo /usr/bin/mysql_secure_installation</li>
+</ul>
 
-&lt;h4 id=&quot;2-mysql-kurulumu&quot;&gt;2) Mysql Kurulumu&lt;/h4&gt;
+<h4 id="3php-kurulumu">3)Php Kurulumu</h4>
 
-&lt;ul&gt;
-  &lt;li&gt;sudo apt-get install mysql-server php5-mysql&lt;/li&gt;
-  &lt;li&gt;sudo mysql_install_db&lt;/li&gt;
-  &lt;li&gt;sudo /usr/bin/mysql_secure_installation&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>sudo apt-get install php5-fpm fhp5-cli</li>
+</ul>
 
-&lt;h4 id=&quot;3php-kurulumu&quot;&gt;3)Php Kurulumu&lt;/h4&gt;
+<h4 id="4php-ayarları">4)Php Ayarları</h4>
 
-&lt;ul&gt;
-  &lt;li&gt;sudo apt-get install php5-fpm fhp5-cli&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>sudo gedit /etc/php5/fpm/php.ini dosyasını açıp <strong>CGİ.FİX_PATHİNFO=1</strong> satırını bulup değeri 1 ise 0 yapmalıyız.</li>
+  <li>sudo service php5-fpm restart</li>
+</ul>
 
-&lt;h4 id=&quot;4php-ayarları&quot;&gt;4)Php Ayarları&lt;/h4&gt;
+<h4 id="5nginx-ayarları">5)Nginx Ayarları</h4>
 
-&lt;ul&gt;
-  &lt;li&gt;sudo gedit /etc/php5/fpm/php.ini dosyasını açıp &lt;strong&gt;CGİ.FİX_PATHİNFO=1&lt;/strong&gt; satırını bulup değeri 1 ise 0 yapmalıyız.&lt;/li&gt;
-  &lt;li&gt;sudo service php5-fpm restart&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>sudo gedit /etc/nginx/sites-available/default</li>
+</ul>
 
-&lt;h4 id=&quot;5nginx-ayarları&quot;&gt;5)Nginx Ayarları&lt;/h4&gt;
+<p>server {</p>
 
-&lt;ul&gt;
-  &lt;li&gt;sudo gedit /etc/nginx/sites-available/default&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;server {&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;listen 80 default_server;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>listen 80 default_server;
 listen [::]:80 default_server ipv6only=on;
 
 root /usr/share/nginx/html;
@@ -99,7 +72,7 @@ location = /50x.html {
 #
 location ~ \.php$ {
 	fastcgi_split_path_info ^(.+\.php)(/.+)$;
-#	# NOTE: You should have &quot;cgi.fix_pathinfo = 0;&quot; in php.ini
+#	# NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
 #
 #	# With php5-cgi alone:
 #	fastcgi_pass 127.0.0.1:9000;
@@ -117,429 +90,343 @@ location ~ \.php$ {
 #	deny all;
 #}
     }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;ul&gt;
-  &lt;li&gt;sudo service nginx restart&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>sudo service nginx restart</li>
+</ul>
 
-&lt;h4 id=&quot;6nginx-root-klasör-değiştirmetercihen&quot;&gt;6)Nginx Root Klasör Değiştirme(Tercihen)&lt;/h4&gt;
+<h4 id="6nginx-root-klasör-değiştirmetercihen">6)Nginx Root Klasör Değiştirme(Tercihen)</h4>
 
-&lt;p&gt;Nginxin varsayılan root klasörü &lt;strong&gt;/usr/share/nginx/html&lt;/strong&gt; klasörüdür. Yani browsera http://localhost yazdığımızda bu klasörün içindeki index.php çalışır. Root klasörünü izin vererek kullanabilirsiniz ama kendi oluşturduğunuz çalışma dizininizi root klasörü yapmanız daha kullanışlı olur. Bunun için ;&lt;/p&gt;
+<p>Nginxin varsayılan root klasörü <strong>/usr/share/nginx/html</strong> klasörüdür. Yani browsera http://localhost yazdığımızda bu klasörün içindeki index.php çalışır. Root klasörünü izin vererek kullanabilirsiniz ama kendi oluşturduğunuz çalışma dizininizi root klasörü yapmanız daha kullanışlı olur. Bunun için ;</p>
 
-&lt;ul&gt;
-  &lt;li&gt;sudo gedit /etc/nginx/sites-available/default&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>sudo gedit /etc/nginx/sites-available/default</li>
+</ul>
 
-&lt;p&gt;komutunu çalıştırıp açılan sayfada &lt;strong&gt;root /usr/share/nginx/html;&lt;/strong&gt; yazan yeri çalışma dizininizin pathi ile değiştirmelisiniz. Örneğin home dizini altında php klasörü oluşturup onu root yapmak için &lt;strong&gt;root /home/username/php;&lt;/strong&gt; şeklinde değiştirmelisiniz.&lt;/p&gt;
+<p>komutunu çalıştırıp açılan sayfada <strong>root /usr/share/nginx/html;</strong> yazan yeri çalışma dizininizin pathi ile değiştirmelisiniz. Örneğin home dizini altında php klasörü oluşturup onu root yapmak için <strong>root /home/username/php;</strong> şeklinde değiştirmelisiniz.</p>
 
-&lt;h4 id=&quot;7phpmyadmin-kurulumu&quot;&gt;7)Phpmyadmin Kurulumu&lt;/h4&gt;
+<h4 id="7phpmyadmin-kurulumu">7)Phpmyadmin Kurulumu</h4>
 
-&lt;ul&gt;
-  &lt;li&gt;sudo apt-get install phpmyadmin&lt;/li&gt;
-  &lt;li&gt;sudo php5enmod mcrypt&lt;/li&gt;
-  &lt;li&gt;sudo service php5-fpm restart&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>sudo apt-get install phpmyadmin</li>
+  <li>sudo php5enmod mcrypt</li>
+  <li>sudo service php5-fpm restart</li>
+</ul>
 
-&lt;p&gt;&lt;strong&gt;Eğer 6. aşamadaki root klasörü değiştirme işlemi yaptıysanız&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;sudo ln -s /usr/share/phpmyadmin /home/username/php&lt;/li&gt;
-&lt;/ul&gt;
-
+<p><strong>Eğer 6. aşamadaki root klasörü değiştirme işlemi yaptıysanız</strong></p>
 
-    &lt;p&gt;&lt;a href=&quot;http://kaanosman.github.io/programs/install-lemp-stack/&quot;&gt;LEMP Stack Kurulumu&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanosman.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on February 23, 2016.&lt;/p&gt;
-  </content>
-</entry>
+<ul>
+  <li>sudo ln -s /usr/share/phpmyadmin /home/username/php</li>
+</ul>]]></content><author><name>Kaan Arslan</name></author><category term="programs" /><category term="lemp" /><category term="stack" /><category term="linux" /><category term="nginx" /><category term="mysql" /><category term="php" /><summary type="html"><![CDATA[LEMP stack linux üzerinde nginx, Mysql ve Php kullanarak uygulama geliştirmeye yarayan programlar topluluğudur. Web sunucu olarak nginx kullanır. Nginx hızlı, yüksek performanslı, ücretsiz, düşük cpu ve ram kullanan bir web sunucu olduğu için alternatiflerine göre(apache, lighthttp, litespeed, zeus) kullanım oranı son yıllarda gittikçe artmaktadır. Mysql ise oldukça hızlı ve dökümantasyonu zengin bir veri tabanıdır. Php ise web uygulamaları oluşturmak için biçilmiş kaftandır diyebiliriz. Bütün bunları yazacağımız işletim sistemi tabi ki linux olamalı.]]></summary></entry><entry><title type="html">Git Kurulumu ve Kullanımı</title><link href="http://localhost:4000/programs/install-git/" rel="alternate" type="text/html" title="Git Kurulumu ve Kullanımı" /><published>2016-02-22T00:00:00+02:00</published><updated>2016-02-22T00:00:00+02:00</updated><id>http://localhost:4000/programs/install-git</id><content type="html" xml:base="http://localhost:4000/programs/install-git/"><![CDATA[<p>Git bir versiyon kontrol ve kaynak kod yönetim sistemidir. Linus Torvalds tarafından geliştirilmiştir. Çok kişinin çalıştığı projelerde uyumlu bir şekilde çalışma yapılmasını sağlar.</p>
 
+<h2 id="ubuntuda-git-kurulumu">Ubuntuda Git Kurulumu</h2>
 
-<entry>
-  <title type="html"><![CDATA[Git Kurulumu ve Kullanımı]]></title>
-  <link rel="alternate" type="text/html" href="http://kaanosman.github.io/programs/install-git/" />
-  <id>http://kaanosman.github.io/programs/install-git</id>
-  <published>2016-02-22T00:00:00-01:00</published>
-  <updated>2016-02-22T00:00:00-01:00</updated>
-  <author>
-    <name>Kaan Osman Arslan</name>
-    <uri>http://kaanosman.github.io</uri>
-    <email>kaanosmanarslan@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;Git bir versiyon kontrol ve kaynak kod yönetim sistemidir. Linus Torvalds tarafından geliştirilmiştir. Çok kişinin çalıştığı projelerde uyumlu bir şekilde çalışma yapılmasını sağlar.&lt;/p&gt;
+<ul>
+  <li><strong>sudo apt-get install git</strong> komutunu yazdıktan sonra sudo parolanızı girin.</li>
+  <li>Daha sonra terminale <strong>ssh-keygen</strong> komutunu yazarak açık ve gizli anahtarınızı üretin.(ssh ile bağlanmak için)</li>
+  <li><strong>gedit .ssh/id_rsa.pub</strong> komutu ile geditte açılan açık anahtar kodunuzu kopyalayın. Bu kodu githubdaki settings-&gt;ssh keys-&gt;new ssh key bölümüne yapıştırıp kaydedin.</li>
+</ul>
 
-&lt;h2 id=&quot;ubuntuda-git-kurulumu&quot;&gt;Ubuntuda Git Kurulumu&lt;/h2&gt;
+<h2 id="ayarlamalar">Ayarlamalar</h2>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;sudo apt-get install git&lt;/strong&gt; komutunu yazdıktan sonra sudo parolanızı girin.&lt;/li&gt;
-  &lt;li&gt;Daha sonra terminale &lt;strong&gt;ssh-keygen&lt;/strong&gt; komutunu yazarak açık ve gizli anahtarınızı üretin.(ssh ile bağlanmak için)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;gedit .ssh/id_rsa.pub&lt;/strong&gt; komutu ile geditte açılan açık anahtar kodunuzu kopyalayın. Bu kodu githubdaki settings-&amp;gt;ssh keys-&amp;gt;new ssh key bölümüne yapıştırıp kaydedin.&lt;/li&gt;
-&lt;/ul&gt;
+<p>Git kurulduktan sonra aşağıdaki komular ile ayarlamalarını yapabilirsiniz.</p>
 
-&lt;h2 id=&quot;ayarlamalar&quot;&gt;Ayarlamalar&lt;/h2&gt;
+<ul>
+  <li>git config –global user.name “username” =&gt; git için kullanıcı adı</li>
+  <li>git config –global user.email mail@gmail.com =&gt; git için email</li>
+  <li>git config –global core.editor vim =&gt; git için standart editör</li>
+  <li>git config –global merge.tool diffmerge =&gt; git için standart karşılaştırıcı</li>
+</ul>
 
-&lt;p&gt;Git kurulduktan sonra aşağıdaki komular ile ayarlamalarını yapabilirsiniz.&lt;/p&gt;
+<p>Aşağıdaki linkten daha detaylı ayarlarını bulabilirsiniz.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;git config –global user.name “username” =&amp;gt; git için kullanıcı adı&lt;/li&gt;
-  &lt;li&gt;git config –global user.email mail@gmail.com =&amp;gt; git için email&lt;/li&gt;
-  &lt;li&gt;git config –global core.editor vim =&amp;gt; git için standart editör&lt;/li&gt;
-  &lt;li&gt;git config –global merge.tool diffmerge =&amp;gt; git için standart karşılaştırıcı&lt;/li&gt;
-&lt;/ul&gt;
+<p><a href="https://git-scm.com/book/tr/v2/Customizing-Git-Git-Configuration">git ayarları</a></p>
 
-&lt;p&gt;Aşağıdaki linkten daha detaylı ayarlarını bulabilirsiniz.&lt;/p&gt;
+<h2 id="çalışma-mantığı">Çalışma Mantığı</h2>
 
-&lt;p&gt;&lt;a href=&quot;https://git-scm.com/book/tr/v2/Customizing-Git-Git-Configuration&quot;&gt;git ayarları&lt;/a&gt;&lt;/p&gt;
+<p>Gitin çalışma mantığında proje üç dizine ayrılır. Bunlar çalışma dizini, stage ve head dizinleridir.</p>
 
-&lt;h2 id=&quot;Çalışma-mantığı&quot;&gt;Çalışma Mantığı&lt;/h2&gt;
+<ul>
+  <li>
+    <p>Çalışma Dizini : Git init diyerek projemize giti dahil ederiz. Daha sonra yapacağımız değişiklikler gitin çalışma dizinine kaydedilir. Çalışma dizininden stage dizinine aktarmak için <strong>git add file_name</strong> komutu kullanılır. Bütün değişiklikleri atmak için <strong>git add .</strong> komutu kullanılabilir.</p>
+  </li>
+  <li>
+    <p>Stage Dizini : Çalışma dizininde git add komutu ile bu dizine geçilir. Bu dizinden ise <strong>git commit -m “commit message”</strong> komutu ile head dizinine geçilir.</p>
+  </li>
+  <li>
+    <p>Head Dizini : Bu dizin projenin gönderilmeden önceki son durağıdır. <strong>git push origin master</strong> komutu ile proje githuba gönderilir.</p>
+  </li>
+</ul>
 
-&lt;p&gt;Gitin çalışma mantığında proje üç dizine ayrılır. Bunlar çalışma dizini, stage ve head dizinleridir.&lt;/p&gt;
+<h2 id="kullanım">Kullanım</h2>
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Çalışma Dizini : Git init diyerek projemize giti dahil ederiz. Daha sonra yapacağımız değişiklikler gitin çalışma dizinine kaydedilir. Çalışma dizininden stage dizinine aktarmak için &lt;strong&gt;git add file_name&lt;/strong&gt; komutu kullanılır. Bütün değişiklikleri atmak için &lt;strong&gt;git add .&lt;/strong&gt; komutu kullanılabilir.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Stage Dizini : Çalışma dizininde git add komutu ile bu dizine geçilir. Bu dizinden ise &lt;strong&gt;git commit -m “commit message”&lt;/strong&gt; komutu ile head dizinine geçilir.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Head Dizini : Bu dizin projenin gönderilmeden önceki son durağıdır. &lt;strong&gt;git push origin master&lt;/strong&gt; komutu ile proje githuba gönderilir.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+<p>Öncelikle <a href="https://github.com/">githuba</a> üye olun. Daha sonra sağ üstteki + işaretine tıklayarak new repository seçeneğini seçin ve bir repo oluşturun. Daha sonra localdeki projenizin içine girip <strong>git init</strong> komutunu çalıştırarak projenize giti ekleyin. Localinizdeki proje ile uzak deponuzun haberleşebilmesi için <strong>git remote add origin https://github.com/user/repo.git</strong> komutu ile remote eklemeniz gerekir.</p>]]></content><author><name>Kaan Arslan</name></author><category term="programs" /><category term="git" /><category term="github" /><category term="cvs" /><category term="version" /><summary type="html"><![CDATA[Git bir versiyon kontrol ve kaynak kod yönetim sistemidir. Linus Torvalds tarafından geliştirilmiştir. Çok kişinin çalıştığı projelerde uyumlu bir şekilde çalışma yapılmasını sağlar.]]></summary></entry><entry><title type="html">Vim Kurulumu ve Kullanımı</title><link href="http://localhost:4000/programs/install-vim/" rel="alternate" type="text/html" title="Vim Kurulumu ve Kullanımı" /><published>2016-02-21T00:00:00+02:00</published><updated>2016-02-21T00:00:00+02:00</updated><id>http://localhost:4000/programs/install-vim</id><content type="html" xml:base="http://localhost:4000/programs/install-vim/"><![CDATA[<p>Vim vi metin düzenleyici temel alınarak yazılmış açık kaynaklı bir yazılımdır. Özellikle linuxda komut satırından çalışmayı sevenler için kullanışlı bir metin editörüdür. Başlangıçda öğrenmesi biraz zor olsa da öğrendikten sonra alışkanlık haline gelir. Eklenti sayısının çok olması ve çok çeşitli ayarlamalar yaparak kişiselleştirebilmeye imkan tanıması güzel özelliklerindendir.</p>
 
-&lt;h2 id=&quot;kullanım&quot;&gt;Kullanım&lt;/h2&gt;
+<p>Vimde değişik kipler vardır. Bunlar komut kipi, yazma kipi ve görünüm kipleridir.</p>
 
-&lt;p&gt;Öncelikle &lt;a href=&quot;https://github.com/&quot;&gt;githuba&lt;/a&gt; üye olun. Daha sonra sağ üstteki + işaretine tıklayarak new repository seçeneğini seçin ve bir repo oluşturun. Daha sonra localdeki projenizin içine girip &lt;strong&gt;git init&lt;/strong&gt; komutunu çalıştırarak projenize giti ekleyin. Localinizdeki proje ile uzak deponuzun haberleşebilmesi için &lt;strong&gt;git remote add origin https://github.com/user/repo.git&lt;/strong&gt; komutu ile remote eklemeniz gerekir.&lt;/p&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;http://kaanosman.github.io/programs/install-git/&quot;&gt;Git Kurulumu ve Kullanımı&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanosman.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on February 22, 2016.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Vim Kurulumu ve Kullanımı]]></title>
-  <link rel="alternate" type="text/html" href="http://kaanosman.github.io/programs/install-vim/" />
-  <id>http://kaanosman.github.io/programs/install-vim</id>
-  <published>2016-02-21T00:00:00-01:00</published>
-  <updated>2016-02-21T00:00:00-01:00</updated>
-  <author>
-    <name>Kaan Osman Arslan</name>
-    <uri>http://kaanosman.github.io</uri>
-    <email>kaanosmanarslan@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;Vim vi metin düzenleyici temel alınarak yazılmış açık kaynaklı bir yazılımdır. Özellikle linuxda komut satırından çalışmayı sevenler için kullanışlı bir metin editörüdür. Başlangıçda öğrenmesi biraz zor olsa da öğrendikten sonra alışkanlık haline gelir. Eklenti sayısının çok olması ve çok çeşitli ayarlamalar yaparak kişiselleştirebilmeye imkan tanıması güzel özelliklerindendir.&lt;/p&gt;
-
-&lt;p&gt;Vimde değişik kipler vardır. Bunlar komut kipi, yazma kipi ve görünüm kipleridir.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Komut Kipi : Dosya ilk açıldığında bu kiptedir. Eğer en altta dosya ismi gözüküyorsa bu kipte olduğumuzu anlarız. Başka bir kipteyken &lt;strong&gt;esc&lt;/strong&gt;
-tuşuna basarak bu kipe geçiş yapabiliriz.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Yazma Kipi : Klavyedeki &lt;strong&gt;i(insert)&lt;/strong&gt; tuşuna basarak bu kipe geçiş yapabiliriz. En altta INSERT yazıyorsa bu kipte olduğumuzu anlarız. Bu kipteyken dosyaya yazma işlemini yapabiliriz.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Görünüm Kipi : Eğer terminalin en altında VISUAL yazıyorsa bu kipte olduğumuzu anlarız. Sadece dosyayı görüntüleme içindir değişiklik yapılamaz. &lt;strong&gt;v&lt;/strong&gt; tuşuna basılarak bu kipe geçilir.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;ubuntuda-vim-kurulumu&quot;&gt;Ubuntuda Vim Kurulumu&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;sudo apt-get install vim&lt;/strong&gt; komutunu yazdıktan sonra sudo parolanızı girin.&lt;/p&gt;
-
-&lt;h2 id=&quot;ayarlamalar&quot;&gt;Ayarlamalar&lt;/h2&gt;
-
-&lt;p&gt;Vim editörünü bazı ayarlamalar yaparak çok daha kullanışlı hale getirebilirsiniz. Vim ayarlamalarını yapmak için .vimrc dosyasını kullanmalısınız. Bu dosyanın bilgisayarınızda nerede olduğunu bulmak için vim editörünü açıp esc tuşuna basarak komut kipine geçin ve &lt;strong&gt;:version&lt;/strong&gt; yazın. Ekrana gelen çıktıda .vimrc dosyasının nerede bulunduğunu görebilirsiniz. Büyük ihtimalle &lt;strong&gt;$Home/.vimrc&lt;/strong&gt; dizininde bulunur ama kontrol etmekte fayda var. Vim yönetici kipindeyken &lt;strong&gt;:e $Home/.vimrc&lt;/strong&gt; komutuyla vimrc dosyasını açın. Ayarlar için aşağıdaki linkten yararlanabilirsiniz.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://vimconfig.com/&quot;&gt;vimrc ayarları&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Ayarların bazılarını aşağıda açıklayalım.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;set number =&amp;gt; satır numaralarının gözükmesini sağlar.&lt;/li&gt;
-  &lt;li&gt;syntax on =&amp;gt; dosya uzantısına göre renklendirme yapar.&lt;/li&gt;
-  &lt;li&gt;set is =&amp;gt; aranılacak kelime yazılırken bulmaya başlar.&lt;/li&gt;
-  &lt;li&gt;set ic =&amp;gt; büyük-küçük harf ayrımı yapmadan arar.&lt;/li&gt;
-  &lt;li&gt;set hls =&amp;gt; sayfada arama yapılan kelimeleri beirginleştirir.&lt;/li&gt;
-  &lt;li&gt;set encoding=utf-8 =&amp;gt; dosyanın otomatik utf8 formatında olmasını sağlar.&lt;/li&gt;
-  &lt;li&gt;set tabstop=8 =&amp;gt; tab uzunluğunu 8 karakter yapar.&lt;/li&gt;
-  &lt;li&gt;set autoindent =&amp;gt; girintileme özelliğini aktifleştirir.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;kullanım&quot;&gt;Kullanım&lt;/h2&gt;
-
-&lt;p&gt;Vim editöründe bir dosya açmak için terminali açın ve &lt;strong&gt;vim dosya_adı.uzantısı&lt;/strong&gt; şeklinde dosyanın adını ve uzantısını belirtin. Vim uzantıya göre renklendirme yapacaktır. Daha sonra insert moduna geçip kodunuzu yazabilirsiniz.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Dosyayı kaydetmeden çıkmak için &lt;strong&gt;:q&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Dosyayı kaydet ve çık için &lt;strong&gt;:wq&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Dosyayı kaydet ama çıkma &lt;strong&gt;:w&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;İki yatay dosya açmak için &lt;strong&gt;vim -o dosya1.uzantı dosya2.uzantı&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;İki dikey dosya açmak için &lt;strong&gt;vim -O dosya1.uzantı dosya2.uzantı&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;İki dosya arası geçiş yapmak için &lt;strong&gt;ctrl+w&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;komutları kullanılır.&lt;/p&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;http://kaanosman.github.io/programs/install-vim/&quot;&gt;Vim Kurulumu ve Kullanımı&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanosman.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on February 21, 2016.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[İsimlendirme Kuralları(Naming Convention)]]></title>
-  <link rel="alternate" type="text/html" href="http://kaanosman.github.io/coding-standarts/naming-convention/" />
-  <id>http://kaanosman.github.io/coding-standarts/naming-convention</id>
-  <published>2016-01-09T00:00:00-01:00</published>
-  <updated>2016-01-09T00:00:00-01:00</updated>
-  <author>
-    <name>Kaan Osman Arslan</name>
-    <uri>http://kaanosman.github.io</uri>
-    <email>kaanosmanarslan@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;İsimlendirme kuralları hem bireysel hem de bir ekiple yazılım geliştirenler için küçük gibi görünen ama önemli bir konudur. Bunun için belirli isimlendirme kuralları oluşturulmuştur. Namespaceler, classlar, metodlar, değişkenler ve sabitler için yazılan programlama dilinin ismilendirme kurallarını uygulamak ve mantıklı isimler vermek yazılımcılara kolaylık sağlar. Yazılım geliştirdiğimiz dilin isimlendirme kurallarını öğrenip uygulamak önemli bir detaydır. Şimdi bu kuralların neler olduğuna ve bazı dillerde nasıl uygulandığına örneklerle bakalım.&lt;/p&gt;
-
-&lt;h3 id=&quot;camel-casecamelcase&quot;&gt;Camel Case(CamelCase)&lt;/h3&gt;
-
-&lt;p&gt;Camel case çok kullanılan isimlendirme kurallarından biridir. Kelimeler bitişik ve ilk harfleri büyük yazılır. İlk kelimenin ilk harfinin küçük yazıldığı olabilir.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HelloWorld&lt;/p&gt;
-
-&lt;h3 id=&quot;snake-casesnake_case&quot;&gt;Snake Case(Snake_Case)&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Upper snake case&lt;/strong&gt; ve &lt;strong&gt;lower snake case&lt;/strong&gt; olarak ikiye ayırabiliriz. Kelimeler alttire ile birbirine bağlanır.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Upper snake case örnek:&lt;/code&gt; Hello_World&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Lower snake case örnek:&lt;/code&gt; hello_world&lt;/p&gt;
-
-&lt;h3 id=&quot;screaming-snake-casescreamİng_snake_case&quot;&gt;Screaming snake case(SCREAMİNG_SNAKE_CASE)&lt;/h3&gt;
-
-&lt;p&gt;Bütün harfleri büyük yazılır. Genellikle sabit isimlendirmede kullanılır.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Screaming snake case örnek:&lt;/code&gt; HELLO_WORLD&lt;/p&gt;
-
-&lt;p&gt;Şimdi de bazı diller için bu kuralları örneklerle açıklayalım.&lt;/p&gt;
-
-&lt;h2 id=&quot;java-İçin-İsimlendirme-kuralları&quot;&gt;Java İçin İsimlendirme Kuralları&lt;/h2&gt;
-
-&lt;p&gt;Java dilinde isimlendirmeler için bazı standartlar oluşturulmuştur.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sınıflar: Sınıflar için &lt;strong&gt;upper camel case&lt;/strong&gt; kullanılır.                                                              &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HelloWorld&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Methodlar: Methodlar için &lt;strong&gt;lower camel case&lt;/strong&gt; kullanılır.                                                            &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; helloWorld&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Değişkenler: Değişkenler için &lt;strong&gt;lower camel case&lt;/strong&gt; kullanılır.                                                        &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; helloWorld&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sabitler: Sabitler için &lt;strong&gt;screaming snake case&lt;/strong&gt; kullanılır.                                                          &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HELLO_WORLD&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;##Python ve Ruby İçin İsimlendirme Kuralları&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sınıflar ve Paketler: Classlar için &lt;strong&gt;upper camel case&lt;/strong&gt; kullanılır.                                                  &lt;br /&gt;
- &lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HelloWorld&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Methodlar ve Değişkenler: Methodlar ve değişkenler için &lt;strong&gt;lower snake case&lt;/strong&gt; kullanılır.                              &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; hello_world&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sabitler: Sabitlet için &lt;strong&gt;screaming snake case&lt;/strong&gt; kullanılır.                                                          &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HELLO_WORLD&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;php-İçin-İsimlendirme-kuralları&quot;&gt;Php İçin İsimlendirme Kuralları&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sınıflar ve Paketler: Classlar için &lt;strong&gt;upper camel case&lt;/strong&gt; kullanılır.                                                  &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HelloWorld&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Methodlar ve Değişkenler: Methodlar ve değişkenler için &lt;strong&gt;lower camel case&lt;/strong&gt; kullanılır.                              &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; helloWorld&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sabitler: Sabitlet için &lt;strong&gt;screaming snake case&lt;/strong&gt; kullanılır.                                                          &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; HELLO_WORLD&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;değişken-İsimlendirmede-dikkat-edilmesi-gerekenler&quot;&gt;Değişken İsimlendirmede Dikkat Edilmesi Gerekenler&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Değişkenler kullanılan dilin syntaxında var olan kelimeleri alamazlar.                                                &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; int = 2;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Değişkenler sayı ile başlayamaz.                                                                                      &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; 5index = 9;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Değişkenler boşluk veya özel karakter içeremez.                                                                       &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Örnek:&lt;/code&gt; index?number = 6;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://kaanosman.github.io/coding-standarts/naming-convention/&quot;&gt;İsimlendirme Kuralları(Naming Convention)&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanosman.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on January 09, 2016.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Girintileme Stilleri(Indent Styles)]]></title>
-  <link rel="alternate" type="text/html" href="http://kaanosman.github.io/coding-standarts/indent-style/" />
-  <id>http://kaanosman.github.io/coding-standarts/indent-style</id>
-  <published>2016-01-09T00:00:00-01:00</published>
-  <updated>2016-01-09T00:00:00-01:00</updated>
-  <author>
-    <name>Kaan Osman Arslan</name>
-    <uri>http://kaanosman.github.io</uri>
-    <email>kaanosmanarslan@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;Girintileme yapma kodumuzun okunurluğunu ve kalitesini arttırır. Koddaki hataların daha kolay görülmesini sağlar. Girintileme için çeşitli standartlar belirlenmiştir ve bu standartlardan birini seçip kullanmak hem bireysel hem de ekip ile yapılan geliştirmeler için önemli bir konudur.&lt;/p&gt;
-
-&lt;h2 id=&quot;krkernighanritchie-style&quot;&gt;K&amp;amp;R(Kernighan&amp;amp;Ritchie) Style&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;kr-stylestroustrup&quot;&gt;K&amp;amp;R Style(Stroustrup)&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;kr-stylelinux-kernel&quot;&gt;K&amp;amp;R Style(Linux Kernel)&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;kr-stylebsd-knf&quot;&gt;K&amp;amp;R Style(BSD KNF)&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;allman-style&quot;&gt;Allman Style&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;gnu-style&quot;&gt;GNU Style&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; 
-      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;whitesmiths-style&quot;&gt;Whitesmiths Style&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; 
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;hortsmann-style&quot;&gt;Hortsmann Style&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;pico-style&quot;&gt;Pico Style&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-       &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-       &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;ratliff-style&quot;&gt;Ratliff Style&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;lisp-style&quot;&gt;Lisp Style&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;http://kaanosman.github.io/coding-standarts/indent-style/&quot;&gt;Girintileme Stilleri(Indent Styles)&lt;/a&gt; was originally published by Kaan Osman Arslan at &lt;a href=&quot;http://kaanosman.github.io&quot;&gt;Kaan Osman Arslan&lt;/a&gt; on January 09, 2016.&lt;/p&gt;
-  </content>
-</entry>
-
-</feed>
+<ul>
+  <li>
+    <p>Komut Kipi : Dosya ilk açıldığında bu kiptedir. Eğer en altta dosya ismi gözüküyorsa bu kipte olduğumuzu anlarız. Başka bir kipteyken <strong>esc</strong>
+tuşuna basarak bu kipe geçiş yapabiliriz.</p>
+  </li>
+  <li>
+    <p>Yazma Kipi : Klavyedeki <strong>i(insert)</strong> tuşuna basarak bu kipe geçiş yapabiliriz. En altta INSERT yazıyorsa bu kipte olduğumuzu anlarız. Bu kipteyken dosyaya yazma işlemini yapabiliriz.</p>
+  </li>
+  <li>
+    <p>Görünüm Kipi : Eğer terminalin en altında VISUAL yazıyorsa bu kipte olduğumuzu anlarız. Sadece dosyayı görüntüleme içindir değişiklik yapılamaz. <strong>v</strong> tuşuna basılarak bu kipe geçilir.</p>
+  </li>
+</ul>
+
+<h2 id="ubuntuda-vim-kurulumu">Ubuntuda Vim Kurulumu</h2>
+
+<p><strong>sudo apt-get install vim</strong> komutunu yazdıktan sonra sudo parolanızı girin.</p>
+
+<h2 id="ayarlamalar">Ayarlamalar</h2>
+
+<p>Vim editörünü bazı ayarlamalar yaparak çok daha kullanışlı hale getirebilirsiniz. Vim ayarlamalarını yapmak için .vimrc dosyasını kullanmalısınız. Bu dosyanın bilgisayarınızda nerede olduğunu bulmak için vim editörünü açıp esc tuşuna basarak komut kipine geçin ve <strong>:version</strong> yazın. Ekrana gelen çıktıda .vimrc dosyasının nerede bulunduğunu görebilirsiniz. Büyük ihtimalle <strong>$Home/.vimrc</strong> dizininde bulunur ama kontrol etmekte fayda var. Vim yönetici kipindeyken <strong>:e $Home/.vimrc</strong> komutuyla vimrc dosyasını açın. Ayarlar için aşağıdaki linkten yararlanabilirsiniz.</p>
+
+<p><a href="http://vimconfig.com/">vimrc ayarları</a></p>
+
+<p>Ayarların bazılarını aşağıda açıklayalım.</p>
+
+<ul>
+  <li>set number =&gt; satır numaralarının gözükmesini sağlar.</li>
+  <li>syntax on =&gt; dosya uzantısına göre renklendirme yapar.</li>
+  <li>set is =&gt; aranılacak kelime yazılırken bulmaya başlar.</li>
+  <li>set ic =&gt; büyük-küçük harf ayrımı yapmadan arar.</li>
+  <li>set hls =&gt; sayfada arama yapılan kelimeleri beirginleştirir.</li>
+  <li>set encoding=utf-8 =&gt; dosyanın otomatik utf8 formatında olmasını sağlar.</li>
+  <li>set tabstop=8 =&gt; tab uzunluğunu 8 karakter yapar.</li>
+  <li>set autoindent =&gt; girintileme özelliğini aktifleştirir.</li>
+</ul>
+
+<h2 id="kullanım">Kullanım</h2>
+
+<p>Vim editöründe bir dosya açmak için terminali açın ve <strong>vim dosya_adı.uzantısı</strong> şeklinde dosyanın adını ve uzantısını belirtin. Vim uzantıya göre renklendirme yapacaktır. Daha sonra insert moduna geçip kodunuzu yazabilirsiniz.</p>
+
+<ul>
+  <li>Dosyayı kaydetmeden çıkmak için <strong>:q</strong></li>
+  <li>Dosyayı kaydet ve çık için <strong>:wq</strong></li>
+  <li>Dosyayı kaydet ama çıkma <strong>:w</strong></li>
+  <li>İki yatay dosya açmak için <strong>vim -o dosya1.uzantı dosya2.uzantı</strong></li>
+  <li>İki dikey dosya açmak için <strong>vim -O dosya1.uzantı dosya2.uzantı</strong></li>
+  <li>İki dosya arası geçiş yapmak için <strong>ctrl+w</strong></li>
+</ul>
+
+<p>komutları kullanılır.</p>]]></content><author><name>Kaan Arslan</name></author><category term="programs" /><category term="vim" /><category term="editors" /><category term="programming" /><category term="coding" /><summary type="html"><![CDATA[Vim vi metin düzenleyici temel alınarak yazılmış açık kaynaklı bir yazılımdır. Özellikle linuxda komut satırından çalışmayı sevenler için kullanışlı bir metin editörüdür. Başlangıçda öğrenmesi biraz zor olsa da öğrendikten sonra alışkanlık haline gelir. Eklenti sayısının çok olması ve çok çeşitli ayarlamalar yaparak kişiselleştirebilmeye imkan tanıması güzel özelliklerindendir.]]></summary></entry><entry><title type="html">Girintileme Stilleri(Indent Styles)</title><link href="http://localhost:4000/coding-standarts/indent-style/" rel="alternate" type="text/html" title="Girintileme Stilleri(Indent Styles)" /><published>2016-01-09T00:00:00+02:00</published><updated>2016-01-09T00:00:00+02:00</updated><id>http://localhost:4000/coding-standarts/indent-style</id><content type="html" xml:base="http://localhost:4000/coding-standarts/indent-style/"><![CDATA[<p>Girintileme yapma kodumuzun okunurluğunu ve kalitesini arttırır. Koddaki hataların daha kolay görülmesini sağlar. Girintileme için çeşitli standartlar belirlenmiştir ve bu standartlardan birini seçip kullanmak hem bireysel hem de ekip ile yapılan geliştirmeler için önemli bir konudur.</p>
+
+<h2 id="krkernighanritchie-style">K&amp;R(Kernighan&amp;Ritchie) Style</h2>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">index</span><span class="o">--</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">index</span><span class="o">++</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"bar"</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="kr-stylestroustrup">K&amp;R Style(Stroustrup)</h2>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">index</span><span class="o">--</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+    <span class="p">}</span> 
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="n">index</span><span class="o">++</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"bar"</span><span class="p">);</span>
+    <span class="p">}</span></code></pre></figure>
+
+<h2 id="kr-stylelinux-kernel">K&amp;R Style(Linux Kernel)</h2>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">index</span><span class="o">--</span><span class="p">;</span>
+	    <span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">index</span><span class="o">++</span><span class="p">;</span>
+	    <span class="k">return</span><span class="p">(</span><span class="s">"bar"</span><span class="p">);</span>
+    <span class="p">}</span></code></pre></figure>
+
+<h2 id="kr-stylebsd-knf">K&amp;R Style(BSD KNF)</h2>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">index</span><span class="o">--</span><span class="p">;</span>
+	    <span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">index</span><span class="o">++</span><span class="p">;</span>
+	    <span class="k">return</span><span class="p">(</span><span class="s">"bar"</span><span class="p">);</span>
+    <span class="p">}</span></code></pre></figure>
+
+<h2 id="allman-style">Allman Style</h2>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> 
+    <span class="p">{</span>
+        <span class="n">index</span><span class="o">--</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+    <span class="p">}</span> 
+    <span class="k">else</span> 
+    <span class="p">{</span>
+        <span class="n">index</span><span class="o">++</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+    <span class="p">}</span></code></pre></figure>
+
+<h2 id="gnu-style">GNU Style</h2>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> 
+      <span class="p">{</span>
+        <span class="n">index</span><span class="o">--</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+      <span class="p">}</span> 
+    <span class="k">else</span> 
+      <span class="p">{</span>
+        <span class="n">index</span><span class="o">++</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+      <span class="p">}</span></code></pre></figure>
+
+<h2 id="whitesmiths-style">Whitesmiths Style</h2>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> 
+        <span class="p">{</span>
+        <span class="n">index</span><span class="o">--</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+        <span class="p">}</span> 
+    <span class="k">else</span> 
+        <span class="p">{</span>
+        <span class="n">index</span><span class="o">++</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+        <span class="p">}</span></code></pre></figure>
+
+<h2 id="hortsmann-style">Hortsmann Style</h2>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> 
+    <span class="p">{</span>   <span class="n">index</span><span class="o">--</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+    <span class="p">}</span> 
+    <span class="k">else</span> 
+    <span class="p">{</span>   <span class="n">index</span><span class="o">++</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+    <span class="p">}</span></code></pre></figure>
+
+<h2 id="pico-style">Pico Style</h2>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> 
+    <span class="p">{</span>  <span class="n">index</span><span class="o">--</span><span class="p">;</span>
+       <span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span> <span class="p">}</span> 
+    <span class="k">else</span> 
+    <span class="p">{</span>  <span class="n">index</span><span class="o">++</span><span class="p">;</span>
+       <span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span> <span class="p">}</span></code></pre></figure>
+
+<h2 id="ratliff-style">Ratliff Style</h2>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">index</span><span class="o">--</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">index</span><span class="o">++</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span>
+    <span class="p">}</span></code></pre></figure>
+
+<h2 id="lisp-style">Lisp Style</h2>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">index</span><span class="o">--</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span> <span class="p">}</span> 
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="n">index</span><span class="o">++</span><span class="p">;</span>
+	<span class="k">return</span><span class="p">(</span><span class="s">"foo"</span><span class="p">);</span> <span class="p">}</span></code></pre></figure>]]></content><author><name>Kaan Arslan</name></author><category term="coding-standarts" /><category term="indent" /><category term="styles" /><category term="programming" /><category term="coding" /><category term="standarts" /><summary type="html"><![CDATA[Girintileme yapma kodumuzun okunurluğunu ve kalitesini arttırır. Koddaki hataların daha kolay görülmesini sağlar. Girintileme için çeşitli standartlar belirlenmiştir ve bu standartlardan birini seçip kullanmak hem bireysel hem de ekip ile yapılan geliştirmeler için önemli bir konudur.]]></summary></entry><entry><title type="html">İsimlendirme Kuralları(Naming Convention)</title><link href="http://localhost:4000/coding-standarts/naming-convention/" rel="alternate" type="text/html" title="İsimlendirme Kuralları(Naming Convention)" /><published>2016-01-09T00:00:00+02:00</published><updated>2016-01-09T00:00:00+02:00</updated><id>http://localhost:4000/coding-standarts/naming-convention</id><content type="html" xml:base="http://localhost:4000/coding-standarts/naming-convention/"><![CDATA[<p>İsimlendirme kuralları hem bireysel hem de bir ekiple yazılım geliştirenler için küçük gibi görünen ama önemli bir konudur. Bunun için belirli isimlendirme kuralları oluşturulmuştur. Namespaceler, classlar, metodlar, değişkenler ve sabitler için yazılan programlama dilinin ismilendirme kurallarını uygulamak ve mantıklı isimler vermek yazılımcılara kolaylık sağlar. Yazılım geliştirdiğimiz dilin isimlendirme kurallarını öğrenip uygulamak önemli bir detaydır. Şimdi bu kuralların neler olduğuna ve bazı dillerde nasıl uygulandığına örneklerle bakalım.</p>
+
+<h3 id="camel-casecamelcase">Camel Case(CamelCase)</h3>
+
+<p>Camel case çok kullanılan isimlendirme kurallarından biridir. Kelimeler bitişik ve ilk harfleri büyük yazılır. İlk kelimenin ilk harfinin küçük yazıldığı olabilir.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Örnek:</code> HelloWorld</p>
+
+<h3 id="snake-casesnake_case">Snake Case(Snake_Case)</h3>
+
+<p><strong>Upper snake case</strong> ve <strong>lower snake case</strong> olarak ikiye ayırabiliriz. Kelimeler alttire ile birbirine bağlanır.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Upper snake case örnek:</code> Hello_World</p>
+
+<p><code class="language-plaintext highlighter-rouge">Lower snake case örnek:</code> hello_world</p>
+
+<h3 id="screaming-snake-casescreami̇ng_snake_case">Screaming snake case(SCREAMİNG_SNAKE_CASE)</h3>
+
+<p>Bütün harfleri büyük yazılır. Genellikle sabit isimlendirmede kullanılır.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Screaming snake case örnek:</code> HELLO_WORLD</p>
+
+<p>Şimdi de bazı diller için bu kuralları örneklerle açıklayalım.</p>
+
+<h2 id="java-i̇çin-i̇simlendirme-kuralları">Java İçin İsimlendirme Kuralları</h2>
+
+<p>Java dilinde isimlendirmeler için bazı standartlar oluşturulmuştur.</p>
+
+<ul>
+  <li>
+    <p>Sınıflar: Sınıflar için <strong>upper camel case</strong> kullanılır.                                                              <br />
+<code class="language-plaintext highlighter-rouge">Örnek:</code> HelloWorld</p>
+  </li>
+  <li>
+    <p>Methodlar: Methodlar için <strong>lower camel case</strong> kullanılır.                                                            <br />
+<code class="language-plaintext highlighter-rouge">Örnek:</code> helloWorld</p>
+  </li>
+  <li>
+    <p>Değişkenler: Değişkenler için <strong>lower camel case</strong> kullanılır.                                                        <br />
+<code class="language-plaintext highlighter-rouge">Örnek:</code> helloWorld</p>
+  </li>
+  <li>
+    <p>Sabitler: Sabitler için <strong>screaming snake case</strong> kullanılır.                                                          <br />
+<code class="language-plaintext highlighter-rouge">Örnek:</code> HELLO_WORLD</p>
+  </li>
+</ul>
+
+<p>##Python ve Ruby İçin İsimlendirme Kuralları</p>
+
+<ul>
+  <li>
+    <p>Sınıflar ve Paketler: Classlar için <strong>upper camel case</strong> kullanılır.                                                  <br />
+ <code class="language-plaintext highlighter-rouge">Örnek:</code> HelloWorld</p>
+  </li>
+  <li>
+    <p>Methodlar ve Değişkenler: Methodlar ve değişkenler için <strong>lower snake case</strong> kullanılır.                              <br />
+<code class="language-plaintext highlighter-rouge">Örnek:</code> hello_world</p>
+  </li>
+  <li>
+    <p>Sabitler: Sabitlet için <strong>screaming snake case</strong> kullanılır.                                                          <br />
+<code class="language-plaintext highlighter-rouge">Örnek:</code> HELLO_WORLD</p>
+  </li>
+</ul>
+
+<h2 id="php-i̇çin-i̇simlendirme-kuralları">Php İçin İsimlendirme Kuralları</h2>
+
+<ul>
+  <li>
+    <p>Sınıflar ve Paketler: Classlar için <strong>upper camel case</strong> kullanılır.                                                  <br />
+<code class="language-plaintext highlighter-rouge">Örnek:</code> HelloWorld</p>
+  </li>
+  <li>
+    <p>Methodlar ve Değişkenler: Methodlar ve değişkenler için <strong>lower camel case</strong> kullanılır.                              <br />
+<code class="language-plaintext highlighter-rouge">Örnek:</code> helloWorld</p>
+  </li>
+  <li>
+    <p>Sabitler: Sabitlet için <strong>screaming snake case</strong> kullanılır.                                                          <br />
+<code class="language-plaintext highlighter-rouge">Örnek:</code> HELLO_WORLD</p>
+  </li>
+</ul>
+
+<h2 id="değişken-i̇simlendirmede-dikkat-edilmesi-gerekenler">Değişken İsimlendirmede Dikkat Edilmesi Gerekenler</h2>
+
+<ul>
+  <li>
+    <p>Değişkenler kullanılan dilin syntaxında var olan kelimeleri alamazlar.                                                <br />
+<code class="language-plaintext highlighter-rouge">Örnek:</code> int = 2;</p>
+  </li>
+  <li>
+    <p>Değişkenler sayı ile başlayamaz.                                                                                      <br />
+<code class="language-plaintext highlighter-rouge">Örnek:</code> 5index = 9;</p>
+  </li>
+  <li>
+    <p>Değişkenler boşluk veya özel karakter içeremez.                                                                       <br />
+<code class="language-plaintext highlighter-rouge">Örnek:</code> index?number = 6;</p>
+  </li>
+</ul>]]></content><author><name>Kaan Arslan</name></author><category term="coding-standarts" /><category term="naming" /><category term="standarts" /><category term="programming" /><category term="coding" /><summary type="html"><![CDATA[İsimlendirme kuralları hem bireysel hem de bir ekiple yazılım geliştirenler için küçük gibi görünen ama önemli bir konudur. Bunun için belirli isimlendirme kuralları oluşturulmuştur. Namespaceler, classlar, metodlar, değişkenler ve sabitler için yazılan programlama dilinin ismilendirme kurallarını uygulamak ve mantıklı isimler vermek yazılımcılara kolaylık sağlar. Yazılım geliştirdiğimiz dilin isimlendirme kurallarını öğrenip uygulamak önemli bir detaydır. Şimdi bu kuralların neler olduğuna ve bazı dillerde nasıl uygulandığına örneklerle bakalım.]]></summary></entry></feed>
